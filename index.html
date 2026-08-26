@@ -3,27 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>【対象者限定・9月2週間】VantageTrading×Narrow Focus 100%クレジットボーナス｜Narrow公式</title>
-<meta name="description" content="2026年9月1日〜9月14日限定。VantageTradingタイアップ100%クレジットボーナス（最低入金$100・上限$700＝約11.2万円）。90日以上取引から離れていた方だけの特別枠。Narrow Focus限定3大特典付き。">
+<title>【全ユーザー対象・2週間限定】VantageTrading×Narrow Focus コラボ口座 ボーナス20%追加｜Narrow公式</title>
+<meta name="description" content="2026年9月1日〜9月14日限定。VantageTrading×Narrow Focus 限定コラボキャンペーン。コラボ口座限定で入金額の20%をボーナス追加（上限5,000 USDT）。新規・既存とも全ユーザー対象。BTCスプレッド最狭水準のVantageで、戻ってきたボラティリティを狙う。Narrow限定3大特典付き。">
 <meta name="robots" content="index,follow">
 <script>
 /* ============================================================
    ▼▼▼ ここだけ書き換えればOK ▼▼▼
    ============================================================ */
 const CONFIG = {
-  // ① Vantage のタイアップ用リンク（会員ページ／入金ページに飛ぶURL）
-  VANTAGE_LINK: "https://www.vantagejapan.com/",
+  // ① 新規口座の開設リンク（Narrowコラボ口座）
+  VANTAGE_NEW_LINK:      "https://vpltd.co/UZVVva",
 
-  // ② Narrow 公式LINE
+  // ② 既存ユーザーが「追加口座」を作るためのリンク（Vantage会員ページ）
+  //    未支給のうちは "" のままでOK（空なら①と同じリンクを使います）
+  VANTAGE_EXISTING_LINK: "",
+
+  // ③ 既存ユーザーが追加口座作成時に「口座紐づけ依頼（任意）」へ入力する番号
+  PARTNER_CODE: "150247",
+
+  // ④ Narrow 公式LINE
   LINE_URL:     "https://lin.ee/Qqk01yC",
 
-  // ③ パートナーコード（今回の休眠復活枠で不要なら "" のままでOK。
-  //    "" にしておくとページ内のコード関連ブロックが自動で非表示になります）
-  PARTNER_CODE: "",
-
-  // ④ キャンペーン期間（日本時間）。ここを変えるとページ内の日付表示・カウントダウンが全部変わります
+  // ⑤ キャンペーン期間（日本時間）。ここを変えるとページ内の日付表示・カウントダウンが全部変わります
   START: "2026-09-01T00:00:00+09:00",
   END:   "2026-09-14T23:59:59+09:00",
+
+  // ⑥ 円換算の目安レート（1 USDT = 何円か）。表示は「約○○円」の目安表記のみ
+  JPY_PER_USDT: 160,
 };
 /* ============================================================ */
 </script>
@@ -45,6 +51,7 @@ const CONFIG = {
   --gold:#f2c14e;          /* 金額用 */
   --gold-deep:#c9971b;
   --gold-pale:rgba(242,193,78,.12);
+  --btc:#f7931a;           /* Bitcoin オレンジ */
   --red:#e2334a;
   --red-pale:rgba(226,51,74,.12);
   --green:#06C755;
@@ -138,54 +145,28 @@ section{padding:46px 22px;}
 .sec-title .gold{color:var(--gold);}
 .sec-lead{text-align:center;font-size:13.5px;color:var(--muted);margin-bottom:26px;}
 
-/* ---- 対象者チェック ---- */
-.check-sec{background:linear-gradient(180deg,#0e1620,#0c1119);}
-.check-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 18px;box-shadow:var(--shadow);}
-.chk{
-  display:flex;gap:12px;align-items:flex-start;background:var(--card2);
-  border:1.5px solid var(--line);border-radius:12px;padding:14px 15px;margin-bottom:10px;cursor:pointer;
-  transition:border-color .2s,background .2s;user-select:none;
+/* ---- WHY NOW ---- */
+.why-sec{background:linear-gradient(180deg,#0e1620,#0c1119);}
+.why-list{display:flex;flex-direction:column;gap:12px;}
+.why{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow);}
+.why .ic{
+  flex:0 0 46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+  background:var(--orange-pale);font-size:21px;
 }
-.chk.on{border-color:var(--orange);background:rgba(255,94,13,.09);}
-.chk .bx{
-  flex:0 0 24px;height:24px;border-radius:7px;border:2px solid #45525f;background:#0b1017;
-  display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;color:transparent;margin-top:1px;
-}
-.chk.on .bx{background:var(--orange);border-color:var(--orange);color:#fff;}
-.chk p{font-size:13.5px;line-height:1.65;}
-.chk p b{color:#ff8442;}
-.chk-result{
-  margin-top:6px;border-radius:12px;padding:16px 14px;text-align:center;
-  border:1.5px dashed var(--line);background:#0b1017;font-size:13.5px;color:var(--muted);font-weight:700;
-}
-.chk-result.hit{border:1.5px solid var(--gold-deep);background:var(--gold-pale);color:var(--gold);font-size:16px;}
-.chk-note{font-size:12px;color:var(--muted);margin-top:14px;background:#0b1017;border:1px solid var(--line);border-radius:10px;padding:12px 14px;}
-.chk-note b{color:#ff8d99;}
-
-/* ---- 悩み→解決 ---- */
-.pain-sec{background:var(--bg2);}
-.pain-list{display:flex;flex-direction:column;gap:12px;}
-.pain{
-  display:flex;gap:12px;align-items:flex-start;background:var(--card);
-  border:1px solid var(--line);border-radius:12px;padding:14px 16px;
-}
-.pain .x{flex:0 0 auto;color:var(--red);font-weight:900;font-size:16px;padding-top:1px;}
-.pain p{font-size:13.5px;color:var(--txt);}
-.pain p b{color:#ff8d99;}
-.turn{
-  margin:22px auto 0;text-align:center;background:var(--orange-pale);border-radius:14px;
-  padding:20px 18px;border:1px solid rgba(255,94,13,.35);
-}
-.turn p{font-size:14.5px;font-weight:700;line-height:1.8;}
-.turn p .accent{color:#ff8442;}
-.turn p .gold{color:var(--gold);}
+.why h3{font-size:15.5px;font-weight:800;margin-bottom:3px;line-height:1.45;}
+.why h3 .btc{color:var(--btc);}
+.why h3 .accent{color:#ff8442;}
+.why p{font-size:13px;color:var(--muted);}
+.why p b{color:var(--txt);}
+.why-note{margin-top:16px;font-size:11.5px;color:var(--muted);background:#0b1017;border:1px solid var(--line);border-radius:10px;padding:12px 14px;line-height:1.75;}
 
 /* ---- ボーナス図解 ---- */
 .calc-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px 18px;box-shadow:var(--shadow);}
 .calc-row{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;}
 .calc-box{text-align:center;border-radius:12px;padding:14px 10px;flex:1;min-width:100px;}
 .calc-box .t{font-size:12px;font-weight:700;margin-bottom:4px;color:var(--muted);}
-.calc-box .v{font-size:20px;font-weight:900;line-height:1.2;}
+.calc-box .v{font-size:19px;font-weight:900;line-height:1.2;}
+.calc-box .v small{font-size:12px;}
 .calc-box.dep{background:var(--teal-pale);border:1px solid rgba(23,177,195,.35);}
 .calc-box.dep .v{color:var(--teal);}
 .calc-box.bonus{background:var(--gold-pale);border:1px solid rgba(242,193,78,.4);}
@@ -196,15 +177,16 @@ section{padding:46px 22px;}
   border:1.5px solid var(--gold-deep);border-radius:12px;padding:14px 10px;
 }
 .calc-result .t{font-size:13px;font-weight:700;color:var(--muted);}
-.calc-result .v{font-size:30px;font-weight:900;color:var(--gold);line-height:1.2;}
-.calc-result .v small{font-size:15px;}
-.calc-switch{display:flex;gap:8px;margin-bottom:16px;}
+.calc-result .v{font-size:29px;font-weight:900;color:var(--gold);line-height:1.2;}
+.calc-result .v small{font-size:14px;}
+.calc-result .jpy{font-size:12px;color:var(--muted);font-weight:700;margin-top:2px;}
+.calc-switch{display:flex;gap:7px;margin-bottom:16px;}
 .sw-btn{
   flex:1;background:var(--card2);border:1.5px solid var(--line);color:var(--muted);
-  font-size:13px;font-weight:800;padding:10px 6px;border-radius:10px;cursor:pointer;font-family:inherit;line-height:1.4;
+  font-size:12.5px;font-weight:800;padding:10px 4px;border-radius:10px;cursor:pointer;font-family:inherit;line-height:1.4;
 }
 .sw-btn.active{background:var(--orange-deep);border-color:var(--orange);color:#fff;box-shadow:0 4px 14px rgba(255,94,13,.3);}
-.calc-note{font-size:11.5px;color:var(--muted);margin-top:12px;text-align:center;}
+.calc-note{font-size:11.5px;color:var(--muted);margin-top:12px;text-align:center;line-height:1.75;}
 .points{display:flex;flex-direction:column;gap:12px;margin-top:24px;}
 .point{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow);}
 .point .ic{
@@ -214,6 +196,43 @@ section{padding:46px 22px;}
 .point h3{font-size:15px;font-weight:800;margin-bottom:2px;}
 .point h3 .accent{color:#ff8442;}
 .point p{font-size:13px;color:var(--muted);}
+
+/* ---- 参加ルート（新規／既存） ---- */
+.join-sec{background:var(--bg2);}
+.route-tabs{display:flex;gap:8px;margin-bottom:18px;}
+.rt-btn{
+  flex:1;background:var(--card2);border:1.5px solid var(--line);color:var(--muted);
+  font-size:14px;font-weight:800;padding:12px 6px;border-radius:12px;cursor:pointer;font-family:inherit;line-height:1.35;
+}
+.rt-btn small{display:block;font-size:11px;font-weight:700;opacity:.85;margin-top:2px;}
+.rt-btn.active{background:var(--orange-deep);border-color:var(--orange);color:#fff;box-shadow:0 4px 16px rgba(255,94,13,.32);}
+.route-panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 18px;box-shadow:var(--shadow);}
+.route-panel h3{font-size:17px;font-weight:800;line-height:1.5;margin-bottom:6px;}
+.route-panel h3 .or{color:#ff8442;}
+.route-panel > p{font-size:13.5px;color:var(--muted);margin-bottom:14px;}
+.route-steps{display:flex;flex-direction:column;gap:10px;}
+.route-steps li{
+  list-style:none;display:flex;gap:11px;align-items:flex-start;
+  background:var(--card2);border:1px solid var(--line);border-radius:10px;padding:12px 13px;font-size:13px;line-height:1.7;
+}
+.route-steps .n{
+  flex:0 0 22px;height:22px;border-radius:50%;background:var(--orange-deep);color:#fff;
+  font-size:12px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:2px;
+}
+.route-steps b{color:var(--gold);}
+
+/* ---- コード ---- */
+.code-box{margin:16px 0 4px;background:#000;border:1.5px dashed var(--gold);border-radius:12px;padding:15px 14px;text-align:center;}
+.code-box .lbl{font-size:11.5px;color:var(--gold);font-weight:800;letter-spacing:.06em;line-height:1.6;}
+.code-box .code{
+  font-size:30px;font-weight:900;color:#fff;letter-spacing:.16em;margin:6px 0 10px;
+  font-family:Consolas,Monaco,monospace;word-break:break-all;
+}
+.copy-btn{
+  background:var(--gold);color:#3a2800;border:none;font-size:13.5px;font-weight:800;
+  padding:10px 26px;border-radius:999px;cursor:pointer;font-family:inherit;
+}
+.copy-btn:active{transform:scale(.96);}
 
 /* ---- 注意 ---- */
 .warn-sec{background:linear-gradient(180deg,#160a0d,#1c0c11);}
@@ -226,17 +245,6 @@ section{padding:46px 22px;}
 .warn-list li{list-style:none;font-size:13.5px;color:#eddadd;position:relative;padding-left:24px;line-height:1.7;}
 .warn-list li::before{content:"!";position:absolute;left:0;top:5px;color:#ff6b78;font-weight:900;background:rgba(226,51,74,.2);width:17px;height:17px;border-radius:50%;font-size:11px;display:flex;align-items:center;justify-content:center;}
 .warn-list li b{color:#ffd3d8;}
-.code-box{margin:16px 0 6px;background:#000;border:1.5px dashed var(--gold);border-radius:12px;padding:14px;text-align:center;}
-.code-box .lbl{font-size:11.5px;color:var(--gold);font-weight:800;letter-spacing:.1em;}
-.code-box .code{
-  font-size:24px;font-weight:900;color:#fff;letter-spacing:.12em;margin:4px 0 10px;
-  font-family:Consolas,Monaco,monospace;word-break:break-all;
-}
-.copy-btn{
-  background:var(--gold);color:#3a2800;border:none;font-size:13.5px;font-weight:800;
-  padding:10px 26px;border-radius:999px;cursor:pointer;font-family:inherit;
-}
-.copy-btn:active{transform:scale(.96);}
 
 /* ---- BAN・利益没収の警告 ---- */
 .ban-sec{background:linear-gradient(180deg,#1d0b10,#120609);border-top:2px solid var(--red);border-bottom:2px solid var(--red);}
@@ -284,6 +292,7 @@ section{padding:46px 22px;}
 }
 .tokuten-card h3{font-size:17px;font-weight:800;line-height:1.5;}
 .tokuten-card h3 .free{color:var(--teal);}
+.tokuten-card h3 .gold{color:var(--gold);}
 .tk-list{margin-top:10px;display:flex;flex-direction:column;gap:7px;}
 .tk-list li{list-style:none;font-size:13px;color:var(--txt);position:relative;padding-left:20px;line-height:1.7;}
 .tk-list li::before{content:"✓";color:var(--teal);font-weight:900;position:absolute;left:0;top:0;}
@@ -293,7 +302,6 @@ section{padding:46px 22px;}
 .line-guide{text-align:center;margin-top:22px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 18px;box-shadow:var(--shadow);}
 .line-guide .t{font-size:15px;font-weight:800;line-height:1.7;}
 .line-guide .t b{color:var(--green);}
-
 
 /* ---- 信頼（HAYA / Narrow Focus） ---- */
 .trust-sec{background:linear-gradient(180deg,#0c1119,#0e1620);}
@@ -333,7 +341,7 @@ section{padding:46px 22px;}
 .sticky-cta.show{transform:translate(-50%,0);}
 .sticky-cta .cta-btn{margin:0 auto;padding:14px;font-size:15px;}
 
-/* ---- PC表示：スマホのデザインをそのまま拡大（レイアウトは変えない） ---- */
+/* ---- PC表示：スマホのデザインをそのまま拡大 ---- */
 @media (min-width:1024px){ body{zoom:1.5;} }
 @media (min-width:1500px){ body{zoom:1.8;} }
 
@@ -349,21 +357,21 @@ section{padding:46px 22px;}
   <!-- ============ ヒーロー ============ -->
   <header class="hero">
     <div class="hero-visual">
-      <img src="hero-main.webp" alt="VantageTrading × Narrow Focus 100%クレジットボーナス 特別タイアップ" fetchpriority="high">
+      <img src="hero-main.webp" alt="VantageTrading × Narrow Focus 限定コラボキャンペーン ボーナス20%追加" fetchpriority="high">
     </div>
     <div class="hero-body">
-      <span class="badge">対象者限定・2週間だけの特別枠</span>
-      <h1>止まっていた口座が、<br><span class="accent">2倍の資金</span>で動き出す。</h1>
-      <p class="lead"><b>しばらく取引から離れていた方だけ</b>の特別タイアップ。対象口座への入金に、同額のクレジットボーナスが上乗せされます（最低 $100・上限 <b>$700＝約11.2万円</b>）。<b>新規開設の方は今回の対象外</b>です。</p>
-      <div class="period">⏳ <span class="js-period">2026年9月1日 〜 9月14日</span>（2週間）</div>
+      <span class="badge">全ユーザー対象・2週間限定</span>
+      <h1>ボラが戻った今、<br>資金は<span class="accent">20%増し</span>で構える。</h1>
+      <p class="lead">Bitcoinが8万ドルを回復し、<b>ボラティリティが戻ってきました</b>。VantageTrading × Narrow Focus の<b>コラボ口座限定</b>で、入金額の<b>20%をボーナスとして追加</b>（上限 5,000 USDT）。<b>新規も既存も、全ユーザーが対象</b>です。</p>
+      <div class="period">⏳ <span class="js-period">9/1〜9/14</span>（2週間）</div>
       <div class="target-pills">
-        <span class="pill hot">🔁 90日以上 取引なしの方</span>
-        <span class="pill hot">💴 最低入金 $100〜</span>
-        <span class="pill">クッション機能あり</span>
+        <span class="pill hot">👥 全ユーザー対象</span>
+        <span class="pill hot">💰 上限 5,000 USDT</span>
+        <span class="pill">5営業日以内に付与</span>
       </div>
-      <a href="#" class="cta-btn js-vt">100%ボーナスを受け取る<small>▶ お持ちの口座にログイン → 入金するだけ</small></a>
-      <a href="#target" class="cta-btn sub">自分が対象か 30秒でチェック</a>
-      <p class="micro">※ボーナスは<a href="#target">対象条件</a>を満たす口座への、期間中の入金のみが対象です</p>
+      <a href="#" class="cta-btn js-vt-new">コラボ口座をつくる<small>▶ 新規の方はこちら（最短3分）</small></a>
+      <a href="#join" class="cta-btn sub">すでにVantage口座をお持ちの方はこちら</a>
+      <p class="micro">※ボーナスは<a href="#join">コラボ口座</a>での参加が条件です</p>
     </div>
   </header>
 
@@ -379,112 +387,130 @@ section{padding:46px 22px;}
     <p class="cd-note">開催期間：<span class="js-period-long">2026年9月1日 〜 2026年9月14日</span>（日本時間）</p>
   </div>
 
-  <!-- ============ 対象者チェック ============ -->
-  <section class="check-sec" id="target">
-    <div class="sec-tag">WHO</div>
-    <h2 class="sec-title">これは<span class="or">全員向けではありません</span>。<br>あなたは対象ですか？</h2>
-    <p class="sec-lead">下の3つ、すべてに当てはまる方だけの枠です。<br>タップして確認してください。</p>
-
-    <div class="check-card">
-      <div class="chk" data-chk="1">
-        <div class="bx">✓</div>
-        <p><b>VantageTradingの口座を、すでに持っている</b><br><span style="color:var(--muted);font-size:12.5px;">今回は新規開設の方は対象外です</span></p>
+  <!-- ============ WHY NOW ============ -->
+  <section class="why-sec">
+    <div class="sec-tag">WHY NOW</div>
+    <h2 class="sec-title">なぜ、<span class="or">今なのか</span>。</h2>
+    <p class="sec-lead">動かない相場では、どんな手法も結果が出ません。<br>「動きが戻ったとき」に構えられているかがすべてです。</p>
+    <div class="why-list">
+      <div class="why">
+        <div class="ic">₿</div>
+        <div><h3><span class="btc">Bitcoin が8万ドルを回復</span></h3><p>長い停滞を抜けて<b>上値を試す動き</b>が出てきました。方向感が出た相場は、根拠を持って入れる場面が増えます。</p></div>
       </div>
-      <div class="chk" data-chk="2">
-        <div class="bx">✓</div>
-        <p><b>過去に実際にトレードしていた</b><br><span style="color:var(--muted);font-size:12.5px;">いわゆる「元アクティブ」のアカウントであること</span></p>
+      <div class="why">
+        <div class="ic">📈</div>
+        <div><h3><span class="accent">ボラティリティが復活</span></h3><p>値幅が戻れば、<b>1回のトレードで狙える幅</b>も変わります。待っていた人にとっては、ようやくの再開タイミングです。</p></div>
       </div>
-      <div class="chk" data-chk="3">
-        <div class="bx">✓</div>
-        <p><b>直近90日以上、取引していない</b><br><span style="color:var(--muted);font-size:12.5px;">相場から離れていた期間が3ヶ月以上あること</span></p>
+      <div class="why">
+        <div class="ic">⚡</div>
+        <div><h3>Vantageの<span class="accent">BTCスプレッドは最狭水準</span></h3><p>ビットコインは<b>スプレッドの差が損益に直結</b>します。値動きが大きい今こそ、コストの薄い環境が効いてきます。</p></div>
       </div>
-      <div class="chk-result" id="chkResult">3つタップして判定します</div>
-      <p class="chk-note">※最終的な対象判定は<b>VantageTrading側のアカウント履歴</b>で行われます。「自分は対象？」と迷う場合は、入金する前に公式LINEからご確認ください（判定のお手伝いをします）。</p>
-      <a href="#" class="cta-btn line js-line" style="margin-top:16px;">公式LINEで対象か確認する<small>▶ 登録無料・30秒</small></a>
     </div>
-  </section>
-
-  <!-- ============ 離れた理由 → 転換 ============ -->
-  <section class="pain-sec">
-    <div class="sec-tag">WHY</div>
-    <h2 class="sec-title">相場から離れた理由、<br><span class="or">だいたい3つ</span>です。</h2>
-    <p class="sec-lead">才能の問題ではありません。ほとんどが「資金」と「環境」の問題です。</p>
-    <div class="pain-list">
-      <div class="pain"><span class="x">✕</span><p>一度<b>大きく溶かして</b>、また入金するのが怖くなった</p></div>
-      <div class="pain"><span class="x">✕</span><p>証拠金が薄く、<b>少しの逆行でロスカット</b>。分析は合っていたのに退場した</p></div>
-      <div class="pain"><span class="x">✕</span><p>忙しくてチャートから離れ、<b>戻るきっかけ</b>を失ったまま口座が眠っている</p></div>
-    </div>
-    <div class="turn">
-      <p>戻るなら、<span class="accent">資金も環境も「倍」にして</span>。<br>
-      証拠金を厚くする<span class="gold">100%クレジットボーナス</span>と、<br>
-      判断を支える<span class="accent">Narrowの3大特典</span>をセットで。</p>
-    </div>
+    <p class="why-note">※相場は常に変動します。上記は執筆時点の環境についての説明であり、今後の値動きや利益を保証するものではありません。スプレッドは市況・時間帯により変動します。</p>
   </section>
 
   <!-- ============ ボーナス図解 ============ -->
   <section>
     <div class="sec-tag">BONUS</div>
-    <h2 class="sec-title">入金額が、<br><span class="gold">そのまま2倍の証拠金</span>に</h2>
-    <p class="sec-lead">入金と同額のクレジットがその場で上乗せ。<br>ロスカットまでの距離に余裕が生まれます。</p>
+    <h2 class="sec-title">入金額に、<br><span class="gold">20%がそのまま上乗せ</span></h2>
+    <p class="sec-lead">コラボ口座限定の追加ボーナス。<br>上限は 5,000 USDT（<span class="js-jpy-cap">約80万円</span>相当）です。</p>
 
     <div class="calc-switch">
-      <button class="sw-btn active" data-amt="min">最低ライン<br>$100（約1.6万円）</button>
-      <button class="sw-btn" data-amt="max">上限まで<br>$700（約11.2万円）</button>
+      <button class="sw-btn active" data-amt="a">1,000<br>USDT</button>
+      <button class="sw-btn" data-amt="b">5,000<br>USDT</button>
+      <button class="sw-btn" data-amt="c">25,000<br>USDT（上限）</button>
     </div>
 
     <div class="calc-card">
       <div class="calc-row">
-        <div class="calc-box dep"><div class="t">あなたの入金</div><div class="v" id="calcDep">1.6<small>万円</small></div></div>
+        <div class="calc-box dep"><div class="t">あなたの入金</div><div class="v" id="calcDep">1,000<small> USDT</small></div></div>
         <div class="calc-op">＋</div>
-        <div class="calc-box bonus"><div class="t">クレジット100%</div><div class="v" id="calcBon">1.6<small>万円</small></div></div>
+        <div class="calc-box bonus"><div class="t">ボーナス20%</div><div class="v" id="calcBon">200<small> USDT</small></div></div>
       </div>
       <div class="calc-result">
-        <div class="t">取引に使える証拠金</div>
-        <div class="v" id="calcSum">3.2<small>万円</small></div>
+        <div class="t">取引に使える資金</div>
+        <div class="v" id="calcSum">1,200<small> USDT</small></div>
+        <div class="jpy" id="calcJpy">（約19.2万円 相当）</div>
       </div>
-      <p class="calc-note">※$700（約11.2万円）までの入金に100%適用。クレジットは証拠金として利用でき、クレジットで得た<b>利益は出金できます</b>（クレジット自体の出金は不可）。<br>※円換算は 1ドル＝160円で計算した目安です。</p>
+      <p class="calc-note">※ボーナスは入金額の20%。付与上限は 5,000 USDT のため、<b>25,000 USDT の入金で上限に到達</b>します。<br>※円換算は 1 USDT＝160円で計算した目安です。レートにより変動します。</p>
     </div>
 
     <div class="points">
       <div class="point">
-        <div class="ic">💰</div>
-        <div><h3>入金額が<span class="accent">まるごと2倍</span></h3><p>$700（約11.2万円）までの入金に全額クレジット。最大で証拠金 約22.4万円からの再スタートになります。</p></div>
+        <div class="ic">👥</div>
+        <div><h3><span class="accent">全ユーザーが対象</span></h3><p>新規の方も、すでにVantage口座をお持ちの方も参加できます。既存の方は追加口座を作るだけでOKです。</p></div>
       </div>
       <div class="point">
-        <div class="ic">🛡️</div>
-        <div><h3>負けても粘れる<span class="accent">クッション機能</span></h3><p>クレジットが有効証拠金としてカウントされるため、自己資金が減ってもボーナス分で取引を継続できます。</p></div>
+        <div class="ic">⏱️</div>
+        <div><h3>条件達成後<span class="accent">5営業日以内</span>に付与</h3><p>ボーナスは条件を満たしたあと、5営業日以内に口座へ反映されます。反映がない場合はサポートへご確認ください。</p></div>
       </div>
       <div class="point">
-        <div class="ic">📈</div>
-        <div><h3>利益は<span class="accent">そのまま出金OK</span></h3><p>Vantageの入金ボーナスは、利益を出金するための取引量（ロット）条件が設定されていません。※最新条件は公式でご確認ください。</p></div>
+        <div class="ic">🔗</div>
+        <div><h3><span class="accent">他キャンペーンと併用可</span></h3><p>9/2から始まる<b>「仮想通貨での初回入金特別ボーナス」</b>と<b>「JCBカードでの入金ボーナス」</b>に重ねて受け取れます。</p></div>
       </div>
     </div>
-    <a href="#" class="cta-btn js-vt" style="margin-top:26px;">今すぐボーナスを受け取る<small>▶ 期間：<span class="js-period">9/1〜9/14</span></small></a>
+    <a href="#join" class="cta-btn" style="margin-top:26px;">参加方法を見る<small>▶ 新規の方／口座をお持ちの方</small></a>
   </section>
 
-  <!-- ============ 注意 ============ -->
+  <!-- ============ 参加方法（新規／既存） ============ -->
+  <section class="join-sec" id="join">
+    <div class="sec-tag">HOW TO JOIN</div>
+    <h2 class="sec-title">参加方法は<br><span class="or">2つのどちらか</span></h2>
+    <p class="sec-lead">あてはまる方を選んでください。<br>どちらでも「コラボ口座」になれば対象です。</p>
+
+    <div class="route-tabs">
+      <button class="rt-btn active" data-route="new">はじめての方<small>新規で口座をつくる</small></button>
+      <button class="rt-btn" data-route="exist">口座をお持ちの方<small>追加口座をつくる</small></button>
+    </div>
+
+    <div class="route-panel" id="routeNew">
+      <h3>Vantageが<span class="or">はじめて</span>の方</h3>
+      <p>下のボタンから開設すれば、そのままコラボ口座になります。コードの入力は不要です。</p>
+      <ul class="route-steps">
+        <li><span class="n">1</span><div>下のボタンから<b>専用リンク</b>で口座を開設（このリンク経由がコラボ口座の条件です）</div></li>
+        <li><span class="n">2</span><div>本人確認を済ませて<b>入金</b>する</div></li>
+        <li><span class="n">3</span><div>条件達成後、<b>5営業日以内</b>に入金額の20%が付与される</div></li>
+      </ul>
+      <a href="#" class="cta-btn js-vt-new" style="margin-top:16px;">コラボ口座をつくる<small>▶ 専用リンクで開設</small></a>
+    </div>
+
+    <div class="route-panel hidden" id="routeExist">
+      <h3><span class="or">すでに口座をお持ち</span>の方</h3>
+      <p>今の口座はそのままで大丈夫です。<b>追加口座</b>を1つ作り、下の番号を入力してください。</p>
+      <ul class="route-steps">
+        <li><span class="n">1</span><div>Vantageの<b>会員ページにログイン</b>して「追加口座の開設」へ進む</div></li>
+        <li><span class="n">2</span><div>口座タイプは<b>スタンダード／ECN／コピートレード</b>のいずれかを選ぶ</div></li>
+        <li><span class="n">3</span><div><b>「口座紐づけ依頼（任意）」の欄に下の番号を入力</b>する（ここが最重要）</div></li>
+        <li><span class="n">4</span><div>その追加口座へ<b>入金</b> → 5営業日以内に20%が付与される</div></li>
+      </ul>
+
+      <div id="codeBlock">
+        <div class="code-box">
+          <div class="lbl">「口座紐づけ依頼（任意）」に入力する番号</div>
+          <div class="code js-code">------</div>
+          <button class="copy-btn" id="copyBtn">番号をコピー</button>
+        </div>
+      </div>
+      <p class="micro" style="text-align:left;margin-top:12px;">※この番号の入力が抜けるとコラボ口座として認識されず、<b style="color:#ff8d99;">ボーナスの対象外</b>になります。入力を忘れた場合は、入金する前に公式LINEへご相談ください。</p>
+      <a href="#" class="cta-btn js-vt-exist" style="margin-top:12px;">Vantage会員ページへ<small>▶ 追加口座をつくる</small></a>
+    </div>
+  </section>
+
+  <!-- ============ 条件の注意 ============ -->
   <section class="warn-sec" id="notice">
     <div class="sec-tag" style="color:#ff6b78;">IMPORTANT</div>
     <h2 class="sec-title">⚠ 入金する前に<br>ここだけ確認してください</h2>
     <p class="sec-lead">条件は正直に書きます。読んでから判断してください。</p>
     <div class="warn-card">
-      <div class="warn-title">この4つを知らないと<br>「思っていたのと違う」になります</div>
+      <div class="warn-title">この4つを外すと<br>ボーナスがつきません</div>
       <ul class="warn-list">
-        <li><b>対象は「休眠中の既存口座」だけ。</b>今から新規開設しても、この100%枠の対象にはなりません。</li>
-        <li><b>クレジット自体は出金できません。</b>証拠金として使うためのものです。取引で得た<b>利益は出金できます</b>。</li>
-        <li><b>出金するとクレジットは比例して減ります。</b>Vantageのボーナスは、出金・資金移動した割合に応じて消滅する仕様です。</li>
+        <li><b>コラボ口座であること。</b>新規は<b>専用リンク経由</b>、既存は追加口座の「口座紐づけ依頼（任意）」に<b class="js-code">------</b>の入力が必要です。</li>
+        <li><b>対象口座は3種類。</b>スタンダード／ECN／コピートレードが対象です。それ以外の口座タイプは対象外です。</li>
+        <li><b>ボーナスは即時ではありません。</b>条件達成後、<b>5営業日以内</b>に口座へ付与されます。</li>
         <li><b>対象は期間中の入金のみ。</b><span class="js-period-long">9/1〜9/14</span>（日本時間）を過ぎた入金には付与されません。</li>
       </ul>
-
-      <div id="codeBlock" class="hidden">
-        <div class="code-box">
-          <div class="lbl">PARTNER CODE ── 入金／口座作成時に入力</div>
-          <div class="code js-code">-----</div>
-          <button class="copy-btn" id="copyBtn">コードをコピー</button>
-        </div>
-      </div>
     </div>
-    <a href="#" class="cta-btn js-vt" style="margin-top:22px;">条件を理解した上で入金する<small>▶ VantageTrading 公式へ</small></a>
+    <a href="#join" class="cta-btn" style="margin-top:22px;">条件を理解した上で参加する<small>▶ 参加方法へ</small></a>
   </section>
 
   <!-- ============ BAN・利益没収の警告 ============ -->
@@ -501,7 +527,7 @@ section{padding:46px 22px;}
     <div class="ban-list">
       <div class="ban-item">
         <div class="h"><span class="ng">NG 1</span><h4>複数アカウント</h4></div>
-        <p>メールアドレスや本人確認書類を使い分けて、同じ人が複数の口座を持つ行為。<b>発覚した時点で両方の口座が凍結</b>されます。</p>
+        <p>メールアドレスや本人確認書類を使い分けて、同じ人が複数の口座を持つ行為。<b>発覚した時点で両方の口座が凍結</b>されます。※今回の「追加口座」は、同一名義で正規に開設するものなので問題ありません。</p>
       </div>
       <div class="ban-item">
         <div class="h"><span class="ng">NG 2</span><h4>指標発表前の両建て</h4></div>
@@ -509,11 +535,11 @@ section{padding:46px 22px;}
       </div>
       <div class="ban-item">
         <div class="h"><span class="ng">NG 3</span><h4>デバイスの共有</h4></div>
-        <p>1台の端末で複数人の口座にログインする行為。なかでも、複数の口座を管理して<b>ボーナスが100%乗った状態で反対売買を繰り返す</b>のは、特に悪質と判断されます。</p>
+        <p>1台の端末で複数人の口座にログインする行為。なかでも、複数の口座を管理して<b>ボーナスを乗せた状態で反対売買を繰り返す</b>のは、特に悪質と判断されます。</p>
       </div>
       <div class="ban-item">
         <div class="h"><span class="ng">NG 4</span><h4>他社口座との両建て</h4></div>
-        <p>MetaTrader（MQL）側が売買履歴の異常を各業者へ通知する仕組みがあり、<b>業者をまたいだ両建ても発覚します</b>。ボーナス100%の状態で他社と反対売買するのは摘発対象です。</p>
+        <p>MetaTrader（MQL）側が売買履歴の異常を各業者へ通知する仕組みがあり、<b>業者をまたいだ両建ても発覚します</b>。ボーナスを乗せた状態で他社と反対売買するのは摘発対象です。</p>
       </div>
       <div class="ban-item">
         <div class="h"><span class="ng">NG 5</span><h4>同じWi-Fi・同じIP</h4></div>
@@ -527,22 +553,22 @@ section{padding:46px 22px;}
 
   <!-- ============ 受け取りステップ ============ -->
   <section>
-    <div class="sec-tag">HOW TO</div>
-    <h2 class="sec-title">やることは<span class="or">3つだけ</span><br>最短3分で完了</h2>
-    <p class="sec-lead">新しく口座を作る必要はありません。</p>
+    <div class="sec-tag">STEP</div>
+    <h2 class="sec-title">全体の流れは<br><span class="or">3ステップ</span></h2>
+    <p class="sec-lead">最短3分で参加できます。</p>
 
     <div class="steps">
       <div class="step">
         <div class="num">1</div>
-        <div><h4>下のボタンから会員ページにログイン</h4><p>眠っている<b>いつもの口座</b>にそのままログインしてください。ログイン情報を忘れた場合はパスワード再設定から。</p></div>
+        <div><h4>コラボ口座をつくる</h4><p>新規の方は<b>専用リンク</b>から開設。すでに口座をお持ちの方は<b>追加口座</b>を作り、口座紐づけ依頼に<b class="js-code">------</b>を入力します。</p></div>
       </div>
       <div class="step">
         <div class="num">2</div>
-        <div><h4>期間中に $100（約1.6万円）以上を入金</h4><p><span class="js-period-long">9/1〜9/14</span>の間に入金。<b>入金額と同額のクレジット</b>が上限 $700（約11.2万円）まで付与されます。</p></div>
+        <div><h4>期間中に入金する</h4><p><span class="js-period-long">9/1〜9/14</span>の間に入金。入金額の<b>20%</b>がボーナスとして加算されます（上限 5,000 USDT）。</p></div>
       </div>
       <div class="step">
         <div class="num">3</div>
-        <div><h4>クレジット反映を確認 → 取引再開</h4><p>口座残高にクレジットが反映されます。<b>対象口座タイプかどうかは入金前に確認</b>を（プレミアム口座はボーナス対象外です）。</p></div>
+        <div><h4>5営業日以内に付与 → 取引開始</h4><p>条件達成後、<b>5営業日以内</b>に口座へ反映されます。反映されない場合はVantageサポートか公式LINEへ。</p></div>
       </div>
       <div class="step">
         <div class="num">＋</div>
@@ -550,42 +576,42 @@ section{padding:46px 22px;}
       </div>
     </div>
 
-    <a href="#" class="cta-btn js-vt" style="margin-top:26px;">Vantage公式サイトへ進む<small>▶ 期間：<span class="js-period">9/1〜9/14</span> まで</small></a>
+    <a href="#join" class="cta-btn" style="margin-top:26px;">いま参加する<small>▶ 期間：<span class="js-period">9/1〜9/14</span> まで</small></a>
   </section>
 
   <!-- ============ 3大特典 ============ -->
   <section class="tokuten-sec" id="tokuten">
     <div class="sec-tag">BENEFITS</div>
-    <h2 class="sec-title">このページから入金した方限定<br><span class="accent">Narrow 3大特典</span></h2>
-    <p class="sec-lead">ボーナスは「入口」。同じ負け方を繰り返さないための環境をセットで。</p>
+    <h2 class="sec-title">コラボ口座の方限定<br><span class="accent">Narrow 3大特典</span></h2>
+    <p class="sec-lead">資金を厚くするだけでは勝てません。<br>「どこで入るか」を支える環境をセットで。</p>
 
     <div class="tokuten-card">
       <span class="tk-badge">特典 1</span>
-      <h3>Narrow MEMBER<br><span class="free">無料登録</span></h3>
+      <h3>コラボ限定<br><span class="gold">ボーナス20%追加</span></h3>
       <ul class="tk-list">
-        <li>相場分析・トレード解説などの会員限定コンテンツ</li>
-        <li>ブランクがあっても<b>基礎から組み立て直せる</b>学習環境</li>
-        <li>オリジナルインジケーターやレジサポ価格共有など<b>実戦ツールもまとめて使える</b></li>
+        <li>入金額の<b>20%</b>がそのまま上乗せ（上限 5,000 USDT）</li>
+        <li>条件達成後、<b>5営業日以内</b>に口座へ付与</li>
+        <li>9/2からの<b>「仮想通貨での初回入金特別ボーナス」「JCBカードでの入金ボーナス」と併用可能</b></li>
       </ul>
     </div>
 
     <div class="tokuten-card">
       <span class="tk-badge">特典 2</span>
-      <h3>RSIロジック<br><span class="free">AIエントリー配信</span></h3>
+      <h3>生配信トレードへの<span class="free">参加</span></h3>
       <ul class="tk-list">
-        <li>NarrowのRSIロジックに基づく<b>エントリーポイントをAIが配信</b></li>
-        <li>相場勘が鈍っている再開直後の<b>判断材料</b>になる</li>
-        <li>配信を見ながらロジックの考え方そのものが学べる</li>
+        <li><b>実際の相場を見ながらリアルタイムでトレード</b>する配信に参加できます</li>
+        <li>エントリー根拠・損切り・利確の判断を<b>その場で確認</b>できる</li>
+        <li>ひとりで悩まず、判断の作り方をそのまま学べる環境</li>
       </ul>
     </div>
 
     <div class="tokuten-card">
       <span class="tk-badge">特典 3</span>
-      <h3>リアルタイム<span class="free">トレード配信</span></h3>
+      <h3>Telegram<span class="free"> AIトレード配信</span></h3>
       <ul class="tk-list">
-        <li><b>NarrowFocus認定トレーダー</b>の実際のトレードをリアルタイムで視聴</li>
-        <li>エントリー根拠・損切り・利確の判断を生で確認できる</li>
-        <li>HAYAが登場する配信も<b>不定期で開催</b>。ひとりで悩まない学習環境</li>
+        <li>AIを活用したトレード情報を<b>Telegramで配信</b></li>
+        <li>相場から離れていた方も、<b>判断材料</b>を受け取りながら再開できる</li>
+        <li>配信を見ながらロジックの考え方そのものが学べる</li>
       </ul>
     </div>
 
@@ -602,7 +628,7 @@ section{padding:46px 22px;}
     </div>
 
     <div class="line-guide">
-      <p class="t">特典の受け取りは<b>公式LINE</b>から。<br>「入金完了」のスクショを送るだけ。</p>
+      <p class="t">特典の受け取りは<b>公式LINE</b>から。<br>「口座開設・入金完了」のスクショを送るだけ。</p>
       <a href="#" class="cta-btn line js-line" style="margin-top:16px;">公式LINEで3大特典を受け取る<small>▶ 登録無料・30秒で完了</small></a>
     </div>
   </section>
@@ -615,7 +641,7 @@ section{padding:46px 22px;}
     <div class="trust-img"><img src="haya.jpg" alt="トレーダーHAYA - Narrow Focus" loading="lazy"></div>
     <div class="trust-body">
       <p><b>トレーダーHAYA</b>が率いるNarrow Focusは、YouTube相場分析・毎日の相場考察配信・リアルタイムのトレード配信を通じて、<b>判断の根拠を見せる</b>スタイルで発信を続けています。</p>
-      <p>「必ず勝てる」とは言いません。一度退場した経験があるなら、なおさら<b>資金管理と根拠のあるエントリー</b>から作り直してほしい——それが今回のタイアップの趣旨です。</p>
+      <p>「必ず勝てる」とは言いません。ボラティリティが戻った相場ほど、<b>資金管理と根拠のあるエントリー</b>が結果を分けます——それが今回のコラボの趣旨です。</p>
       <p class="trust-note">運営: Narrow Focus（<a href="https://narrow-focus.com" target="_blank" rel="noopener">narrow-focus.com</a>）／ X: @TraderHAYA ／ 特典・サービスは投資助言ではなく情報提供です。</p>
     </div>
   </section>
@@ -627,43 +653,47 @@ section{padding:46px 22px;}
     <p class="sec-lead">不安はここで解消してください。</p>
 
     <details>
-      <summary>自分が対象かどうか、どう確認すればいいですか？</summary>
-      <p class="a">目安は「<b>Vantageの口座を持っている・過去に取引していた・直近90日以上取引していない</b>」の3つすべてに当てはまることです。最終的な判定はVantage側のアカウント履歴で行われますので、迷う場合は<b>入金する前に</b>公式LINEからご相談ください。</p>
+      <summary>誰が対象ですか？</summary>
+      <p class="a"><b>全ユーザーが対象</b>です。Vantageがはじめての方も、すでに口座をお持ちの方も参加できます。条件は「Narrowコラボ口座であること」だけ。新規は専用リンクから開設、既存の方は追加口座の「口座紐づけ依頼（任意）」に <b class="js-code">------</b> を入力してください。</p>
     </details>
     <details>
-      <summary>今から新しく口座を作れば対象になりますか？</summary>
-      <p class="a">いいえ。今回は<b>既存の休眠アカウント向けの第一弾</b>のため、新規開設の方はこの100%枠の対象外です。新規の方向けの企画は別途ご案内予定ですので、公式LINEでお待ちください。</p>
+      <summary>すでにVantage口座を持っています。今の口座はどうなりますか？</summary>
+      <p class="a">今お使いの口座はそのままで問題ありません。<b>追加口座を1つ作る</b>だけで参加できます。追加口座は同一名義での正規の開設なので、複数アカウント扱いにはなりません。</p>
     </details>
     <details>
-      <summary>ボーナスはそのまま出金できますか？</summary>
-      <p class="a">クレジットボーナス自体の出金はできません。ただし<b>クレジットを使った取引で得た利益は出金できます</b>。また、自己資金が減ってもクレジット分で取引を続けられる「クッション機能」があります。</p>
+      <summary>ボーナスはいくらもらえますか？上限は？</summary>
+      <p class="a"><b>入金額の20%</b>です。付与上限は <b>5,000 USDT</b>（<span class="js-jpy-cap">約80万円</span>相当）で、<b>25,000 USDT の入金で上限に到達</b>します。※円換算は1 USDT＝160円で計算した目安です。</p>
     </details>
     <details>
-      <summary>出金したらボーナスはどうなりますか？</summary>
-      <p class="a">Vantageのボーナスは、<b>出金・資金移動した割合に応じてクレジットも減少</b>します（確定した取引利益の範囲内での出金であれば維持されるとされています）。クレジットを残したい場合は出金のタイミングにご注意ください。※詳細な計算方法は公式サイト・サポートでご確認ください。</p>
-    </details>
-    <details>
-      <summary>いくら入金すればいいですか？</summary>
-      <p class="a">最低 <b>$100（約1.6万円）</b>から対象です。ボーナスは <b>$700（約11.2万円）</b>までの入金に100%適用されるため、上限まで入金すると効率が最も高くなります（最大で証拠金 約22.4万円）。※必ず無理のない余剰資金の範囲で行ってください。</p>
+      <summary>ボーナスはいつ付与されますか？</summary>
+      <p class="a">条件達成後、<b>5営業日以内</b>に口座へ付与されます。即時反映ではないのでご注意ください。5営業日を過ぎても反映されない場合は、Vantageサポートまたは公式LINEへご連絡ください。</p>
     </details>
     <details>
       <summary>対象の口座タイプは？</summary>
-      <p class="a">Vantageの入金ボーナスは<b>スタンダード口座・ECN（RAW）口座</b>が対象で、<b>プレミアム口座は対象外</b>です。お使いの口座タイプが不明な場合は、入金前に公式LINEまたはVantageサポートへご確認ください。</p>
+      <p class="a"><b>スタンダード口座／ECN口座／コピートレード口座</b>の3種類が対象です。それ以外の口座タイプは対象外となります。追加口座を作るときに、この3つのいずれかを選んでください。</p>
     </details>
     <details>
-      <summary>利益を出金するのに取引量（ロット）の条件はありますか？</summary>
-      <p class="a">Vantageの入金ボーナスは、口座開設ボーナスと違い<b>利益出金のための取引量条件は設定されていない</b>とされています。ただし条件は変更される場合があるため、最新の適用条件は必ず公式サイトでご確認ください。</p>
+      <summary>他のキャンペーンと併用できますか？</summary>
+      <p class="a">はい、<b>併用可能</b>です。9/2から始まる<b>「仮想通貨での初回入金特別ボーナス」</b>と<b>「JCBカードでの入金ボーナス」</b>に、今回のコラボ20%ボーナスを重ねて受け取れます。※併用対象のキャンペーンは<b>9/2開始</b>のため、9/1のご入金は今回のコラボ20%のみが対象です。詳しい適用条件はVantage公式の各キャンペーンページをご確認ください。</p>
+    </details>
+    <details>
+      <summary>コードの入力を忘れて口座を作ってしまいました。</summary>
+      <p class="a">入力が抜けるとコラボ口座として認識されず、<b>ボーナスの対象外</b>になります。<b>入金する前に</b>公式LINEへご相談ください。状況によって対応できる場合があります。</p>
+    </details>
+    <details>
+      <summary>ボーナスはそのまま出金できますか？</summary>
+      <p class="a">クレジットボーナス自体の出金はできません。ただし<b>ボーナスを使った取引で得た利益は出金できます</b>。また、出金・資金移動を行うと、その割合に応じてボーナスが減少する仕様です。※詳細な条件は必ずVantage公式サイト・サポートでご確認ください。</p>
     </details>
     <details>
       <summary>3大特典は本当に無料ですか？</summary>
-      <p class="a">はい、<b>無料</b>です。当ページ経由で対象口座に入金された方への特典として、Narrow MEMBER無料登録・RSIロジックAIエントリー配信・リアルタイムトレード配信をご案内しています。受け取りは公式LINEに入金完了のスクショを送るだけです。</p>
+      <p class="a">はい、<b>無料</b>です。当ページ経由でコラボ口座を開設・入金された方への特典として、①ボーナス20%追加 ②生配信トレードへの参加 ③Telegram AIトレード配信 をご案内しています。受け取りは公式LINEに完了のスクショを送るだけです。</p>
     </details>
     <details>
-      <summary>キャンペーンはいつまでですか？</summary>
+      <summary>期間はいつまでですか？</summary>
       <p class="a">日本時間で<b><span class="js-period-long">2026年9月1日 〜 2026年9月14日</span></b>までの2週間です。期間を過ぎた入金は対象外となるため、お早めにどうぞ。</p>
     </details>
 
-    <a href="#" class="cta-btn js-vt" style="margin-top:24px;">期間内にボーナスを受け取る<small>▶ <span class="js-period">9/1〜9/14</span> の2週間限定</small></a>
+    <a href="#join" class="cta-btn" style="margin-top:24px;">期間内に参加する<small>▶ <span class="js-period">9/1〜9/14</span> の2週間限定</small></a>
   </section>
 
   <!-- ============ リスク・免責 ============ -->
@@ -671,42 +701,48 @@ section{padding:46px 22px;}
     <div class="pr-note"><b>【PR表記】</b>本ページはVantageTradingのパートナー（アフィリエイト）プログラムによる広告を含みます。当ページのリンクから口座開設・入金・取引が行われた場合、運営者に報酬が支払われることがあります。</div>
     <h3>リスクに関する重要事項</h3>
     <ul>
-      <li>外国為替証拠金取引（FX）やCFD取引はレバレッジの効果により、預託した証拠金を上回る損失が発生するおそれがある、リスクの高い金融商品です。</li>
-      <li>取引は必ずご自身の判断と責任において、生活に影響のない余剰資金の範囲で行ってください。過去の実績は将来の成果を保証するものではありません。</li>
+      <li>外国為替証拠金取引（FX）・CFD取引・暗号資産（仮想通貨）関連商品の取引は、レバレッジの効果により、預託した証拠金を上回る損失が発生するおそれがある、リスクの高い金融商品です。暗号資産は価格変動が特に大きく、短時間で大きな損失が生じる可能性があります。</li>
+      <li>取引は必ずご自身の判断と責任において、生活に影響のない余剰資金の範囲で行ってください。過去の実績や相場環境は、将来の成果を保証するものではありません。</li>
       <li>VantageTrading（Vantage Global Limited 等のグループ各社）は海外の金融ライセンスに基づき運営される業者であり、<b>日本の金融庁に登録された業者ではありません</b>。利用の判断はご自身の責任で行ってください。</li>
-      <li>本ページに記載のボーナス内容・期間・対象条件・上限額・対象口座タイプは、予告なく変更・中止される場合があります。また記載の円換算額は 1ドル＝160円で計算した目安であり、実際の付与額は為替レートにより変動します。最新かつ正確な条件は必ずVantageTrading公式サイトおよびサポートにてご確認ください。</li>
-      <li>特典（Narrow MEMBER・RSIロジックAIエントリー配信・リアルタイムトレード配信ほか各サービス）は投資助言を目的とするものではなく、利益を保証するものではありません。エントリー配信は情報提供であり、売買の最終判断はご自身で行ってください。</li>
+      <li>本ページに記載のボーナス率・上限額・期間・対象口座タイプ・付与時期・併用可否などの条件は、予告なく変更・中止される場合があります。また記載の円換算額は 1 USDT＝160円で計算した目安であり、実際の付与額は為替・暗号資産レートにより変動します。最新かつ正確な条件は必ずVantageTrading公式サイトおよびサポートにてご確認ください。</li>
+      <li>スプレッドに関する記載は執筆時点の一般的な水準についての説明であり、市況・時間帯・銘柄により変動します。特定時点での優位性を保証するものではありません。</li>
+      <li>特典（ボーナス20%追加・生配信トレードへの参加・Telegram AIトレード配信ほか各サービス）は投資助言を目的とするものではなく、利益を保証するものではありません。配信内容は情報提供であり、売買の最終判断はご自身で行ってください。</li>
     </ul>
     <p>© 2026 Narrow Focus. All Rights Reserved.</p>
   </footer>
 
   <!-- ============ 追従CTA ============ -->
   <div class="sticky-cta" id="stickyCta">
-    <a href="#" class="cta-btn js-vt">💰 100%ボーナスを受け取る</a>
+    <a href="#join" class="cta-btn">💰 ボーナス20%を受け取る</a>
   </div>
 
 </div>
 
 <script>
-/* ---- リンク・コードの差し込み ---- */
-document.querySelectorAll('.js-vt').forEach(a=>{a.href=CONFIG.VANTAGE_LINK;a.target="_blank";a.rel="noopener";});
+/* ---- リンクの差し込み ---- */
+const NEW_LINK = CONFIG.VANTAGE_NEW_LINK;
+const EXIST_LINK = (CONFIG.VANTAGE_EXISTING_LINK && CONFIG.VANTAGE_EXISTING_LINK.trim()) ? CONFIG.VANTAGE_EXISTING_LINK : CONFIG.VANTAGE_NEW_LINK;
+document.querySelectorAll('.js-vt-new').forEach(a=>{a.href=NEW_LINK;a.target="_blank";a.rel="noopener";});
+document.querySelectorAll('.js-vt-exist').forEach(a=>{a.href=EXIST_LINK;a.target="_blank";a.rel="noopener";});
 document.querySelectorAll('.js-line').forEach(a=>{a.href=CONFIG.LINE_URL;a.target="_blank";a.rel="noopener";});
 
-/* パートナーコード（空なら関連ブロックを非表示） */
-if(CONFIG.PARTNER_CODE && CONFIG.PARTNER_CODE.trim()!==""){
-  document.getElementById('codeBlock').classList.remove('hidden');
-  document.querySelectorAll('.js-code').forEach(e=>{e.textContent=CONFIG.PARTNER_CODE;});
+/* ---- 口座紐づけ番号 ---- */
+const CODE = (CONFIG.PARTNER_CODE||"").trim();
+document.querySelectorAll('.js-code').forEach(e=>{e.textContent=CODE;});
+if(CODE){
   document.getElementById('copyBtn').addEventListener('click',function(){
     const btn=this;
-    const done=()=>{btn.textContent="✔ コピーしました";setTimeout(()=>btn.textContent="コードをコピー",1800);};
+    const done=()=>{btn.textContent="✔ コピーしました";setTimeout(()=>btn.textContent="番号をコピー",1800);};
     const fallback=()=>{
-      const t=document.createElement('textarea');t.value=CONFIG.PARTNER_CODE;document.body.appendChild(t);
+      const t=document.createElement('textarea');t.value=CODE;document.body.appendChild(t);
       t.select();try{document.execCommand('copy');done();}catch(e){}document.body.removeChild(t);
     };
     if(navigator.clipboard&&navigator.clipboard.writeText){
-      navigator.clipboard.writeText(CONFIG.PARTNER_CODE).then(done).catch(fallback);
+      navigator.clipboard.writeText(CODE).then(done).catch(fallback);
     }else{fallback();}
   });
+}else{
+  document.getElementById('codeBlock').classList.add('hidden');
 }
 
 /* ---- 日付表示（CONFIGから自動生成・日本時間で固定） ---- */
@@ -718,30 +754,40 @@ const longS=jp(dS,{year:'numeric',month:'long',day:'numeric'}), longE=jp(dE,{yea
 document.querySelectorAll('.js-period').forEach(e=>{e.textContent=shortS+"("+wS+")〜"+shortE+"("+wE+")";});
 document.querySelectorAll('.js-period-long').forEach(e=>{e.textContent=longS+"("+wS+")〜"+longE+"("+wE+")";});
 
-/* ---- 対象者チェック ---- */
-const chks=document.querySelectorAll('.chk');
-const chkResult=document.getElementById('chkResult');
-chks.forEach(c=>c.addEventListener('click',()=>{
-  c.classList.toggle('on');
-  const n=document.querySelectorAll('.chk.on').length;
-  if(n===chks.length){
-    chkResult.classList.add('hit');
-    chkResult.innerHTML="✅ あなたは対象の可能性が高いです<br><span style='font-size:12.5px;font-weight:600;'>期間中の入金で100%クレジットが付与されます</span>";
-  }else{
-    chkResult.classList.remove('hit');
-    chkResult.textContent = n===0 ? "3つタップして判定します" : "あと"+(chks.length-n)+"つ確認してください";
-  }
+/* ---- 円換算の目安 ---- */
+const RATE=CONFIG.JPY_PER_USDT||160;
+function man(usdt){
+  const m=usdt*RATE/10000;
+  return (m>=100? Math.round(m) : Math.round(m*10)/10)+"万円";
+}
+document.querySelectorAll('.js-jpy-cap').forEach(e=>{e.textContent="約"+man(5000);});
+
+/* ---- 参加ルート切替（新規／既存） ---- */
+const panels={new:document.getElementById('routeNew'), exist:document.getElementById('routeExist')};
+document.querySelectorAll('.rt-btn').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.rt-btn').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');
+  const r=b.dataset.route;
+  panels.new.classList.toggle('hidden', r!=='new');
+  panels.exist.classList.toggle('hidden', r!=='exist');
 }));
 
 /* ---- 金額シミュレーション ---- */
-const AMT={min:{dep:"1.6",bon:"1.6",sum:"3.2"},max:{dep:"11.2",bon:"11.2",sum:"22.4"}};
+const AMT={a:1000, b:5000, c:25000};
+function fmt(n){return n.toLocaleString('en-US');}
+function renderCalc(dep){
+  const bonus=Math.min(dep*0.2, 5000);
+  const sum=dep+bonus;
+  document.getElementById('calcDep').innerHTML=fmt(dep)+"<small> USDT</small>";
+  document.getElementById('calcBon').innerHTML=fmt(bonus)+"<small> USDT</small>";
+  document.getElementById('calcSum').innerHTML=fmt(sum)+"<small> USDT</small>";
+  document.getElementById('calcJpy').textContent="（約"+man(sum)+" 相当）";
+}
+renderCalc(AMT.a);
 document.querySelectorAll('.sw-btn').forEach(b=>b.addEventListener('click',()=>{
   document.querySelectorAll('.sw-btn').forEach(x=>x.classList.remove('active'));
   b.classList.add('active');
-  const a=AMT[b.dataset.amt];
-  document.getElementById('calcDep').innerHTML=a.dep+"<small>万円</small>";
-  document.getElementById('calcBon').innerHTML=a.bon+"<small>万円</small>";
-  document.getElementById('calcSum').innerHTML=a.sum+"<small>万円</small>";
+  renderCalc(AMT[b.dataset.amt]);
 }));
 
 /* ---- カウントダウン（日本時間） ---- */
