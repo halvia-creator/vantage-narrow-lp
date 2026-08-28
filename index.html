@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>【全ユーザー対象・2週間限定】VantageTrading×Narrow Focus コラボ口座 ボーナス20%追加｜Narrow公式</title>
-<meta name="description" content="2026年9月1日〜9月14日限定。VantageTrading×Narrow Focus 限定コラボキャンペーン。コラボ口座限定で入金額の20%をボーナス追加（上限5,000 USDT）。新規・既存とも全ユーザー対象。BTCスプレッド最狭水準のVantageで、戻ってきたボラティリティを狙う。Narrow限定3大特典付き。">
+<meta name="description" content="2026年9月1日〜9月14日限定。VantageTrading×Narrow Focus 限定コラボキャンペーン。コラボ口座限定で入金額の20%をボーナス追加（上限$5,000）。1日以内に自動付与、1・2回目を含む全入金が対象。新規・既存とも全ユーザー対象。BTCスプレッド業界No.1のVantageで、戻ってきたボラティリティを狙う。">
 <meta name="robots" content="index,follow">
 <script>
 /* ============================================================
@@ -28,8 +28,8 @@ const CONFIG = {
   START: "2026-09-01T00:00:00+09:00",
   END:   "2026-09-14T23:59:59+09:00",
 
-  // ⑥ 円換算の目安レート（1 USDT = 何円か）。表示は「約○○円」の目安表記のみ
-  JPY_PER_USDT: 160,
+  // ⑥ 円換算の目安レート（1ドル＝何円か）。表示は「約○○円」の目安表記のみ
+  JPY_PER_USD: 160,
 };
 /* ============================================================ */
 </script>
@@ -135,6 +135,25 @@ img{max-width:100%;display:block;}
 .cd-cell .num{font-size:26px;font-weight:900;color:#fff;font-variant-numeric:tabular-nums;line-height:1;}
 .cd-cell .u{font-size:10px;color:#ff9557;font-weight:700;margin-top:4px;display:block;}
 .cd-note{font-size:11px;color:#c09277;margin-top:8px;}
+
+/* ---- 併用キャンペーン帯（ヒーロー直下） ---- */
+.combo-bar{
+  background:linear-gradient(180deg,#0b1d21,#0c1119);
+  border-bottom:1px solid var(--line);
+  padding:20px 18px 22px;text-align:center;
+}
+.combo-bar .cb-head{font-size:15px;font-weight:900;line-height:1.5;color:var(--txt);}
+.combo-bar .cb-head b{color:var(--teal);}
+.cb-items{display:flex;align-items:stretch;justify-content:center;gap:8px;margin-top:12px;}
+.cb-item{
+  flex:1;background:var(--card);border:1px solid rgba(23,177,195,.4);border-radius:12px;
+  padding:12px 8px;display:flex;flex-direction:column;align-items:center;gap:5px;
+}
+.cb-item .cb-ic{font-size:22px;line-height:1;}
+.cb-item b{font-size:12.5px;font-weight:800;line-height:1.45;color:var(--txt);}
+.cb-plus{display:flex;align-items:center;font-size:19px;font-weight:900;color:var(--teal);}
+.cb-note{font-size:12px;color:var(--muted);margin-top:11px;line-height:1.65;}
+.cb-note b{color:var(--gold);}
 
 /* ---- セクション ---- */
 section{padding:46px 22px;}
@@ -362,12 +381,12 @@ section{padding:46px 22px;}
     <div class="hero-body">
       <span class="badge">全ユーザー対象・2週間限定</span>
       <h1>ボラが戻った今、<br>資金は<span class="accent">20%増し</span>で構える。</h1>
-      <p class="lead">Bitcoinが8万ドルを回復し、<b>ボラティリティが戻ってきました</b>。VantageTrading × Narrow Focus の<b>コラボ口座限定</b>で、入金額の<b>20%をボーナスとして追加</b>（上限 5,000 USDT）。<b>新規も既存も、全ユーザーが対象</b>です。</p>
+      <p class="lead">Bitcoinが8万ドルを回復し、<b>ボラティリティが戻ってきました</b>。VantageTrading × Narrow Focus の<b>コラボ口座限定</b>で、入金額の<b>20%をボーナスとして追加</b>（上限 $5,000）。<b>1・2回目を含むすべての入金</b>が対象で、<b>1日以内に自動付与</b>。新規も既存も全ユーザーが対象です。</p>
       <div class="period">⏳ <span class="js-period">9/1〜9/14</span>（2週間）</div>
       <div class="target-pills">
         <span class="pill hot">👥 全ユーザー対象</span>
-        <span class="pill hot">💰 上限 5,000 USDT</span>
-        <span class="pill">5営業日以内に付与</span>
+        <span class="pill hot">💰 上限 $5,000</span>
+        <span class="pill hot">⚡ 1日以内に自動付与</span>
       </div>
       <a href="#" class="cta-btn js-vt-new">コラボ口座をつくる<small>▶ 新規の方はこちら（最短3分）</small></a>
       <a href="#join" class="cta-btn sub">すでにVantage口座をお持ちの方はこちら</a>
@@ -387,6 +406,17 @@ section{padding:46px 22px;}
     <p class="cd-note">開催期間：<span class="js-period-long">2026年9月1日 〜 2026年9月14日</span>（日本時間）</p>
   </div>
 
+  <!-- ============ 併用キャンペーン（前出し） ============ -->
+  <div class="combo-bar">
+    <div class="cb-head">しかもこの20%、<b>さらに2つと重ねられます</b></div>
+    <div class="cb-items">
+      <div class="cb-item"><span class="cb-ic">₿</span><b>仮想通貨での<br>初回入金特別ボーナス</b></div>
+      <div class="cb-plus">＋</div>
+      <div class="cb-item"><span class="cb-ic">💳</span><b>JCBカードでの<br>入金ボーナス</b></div>
+    </div>
+    <p class="cb-note">9/2スタートの上記2キャンペーンに、今回のコラボ <b>+20%</b> を上乗せして受け取れます。<br>※併用対象は9/2からのため、9/1のご入金はコラボ20%のみが対象です。</p>
+  </div>
+
   <!-- ============ WHY NOW ============ -->
   <section class="why-sec">
     <div class="sec-tag">WHY NOW</div>
@@ -403,46 +433,46 @@ section{padding:46px 22px;}
       </div>
       <div class="why">
         <div class="ic">⚡</div>
-        <div><h3>Vantageの<span class="accent">BTCスプレッドは最狭水準</span></h3><p>ビットコインは<b>スプレッドの差が損益に直結</b>します。値動きが大きい今こそ、コストの薄い環境が効いてきます。</p></div>
+        <div><h3>VantageのBTCスプレッドは<span class="btc">業界No.1</span></h3><p>ビットコインは<b>スプレッドの差がそのまま損益に直結</b>します。値動きが大きい今こそ、業界で最も狭いコスト環境が効いてきます。</p></div>
       </div>
     </div>
-    <p class="why-note">※相場は常に変動します。上記は執筆時点の環境についての説明であり、今後の値動きや利益を保証するものではありません。スプレッドは市況・時間帯により変動します。</p>
+    <p class="why-note">※相場は常に変動します。上記は執筆時点の環境についての説明であり、今後の値動きや利益を保証するものではありません。スプレッドは市況・時間帯・銘柄により変動します。</p>
   </section>
 
   <!-- ============ ボーナス図解 ============ -->
   <section>
     <div class="sec-tag">BONUS</div>
     <h2 class="sec-title">入金額に、<br><span class="gold">20%がそのまま上乗せ</span></h2>
-    <p class="sec-lead">コラボ口座限定の追加ボーナス。<br>上限は 5,000 USDT（<span class="js-jpy-cap">約80万円</span>相当）です。</p>
+    <p class="sec-lead">コラボ口座限定の追加ボーナス。<br>受取上限は <b>$5,000</b>（<span class="js-jpy-cap">約80万円</span>相当）です。</p>
 
     <div class="calc-switch">
-      <button class="sw-btn active" data-amt="a">1,000<br>USDT</button>
-      <button class="sw-btn" data-amt="b">5,000<br>USDT</button>
-      <button class="sw-btn" data-amt="c">25,000<br>USDT（上限）</button>
+      <button class="sw-btn active" data-amt="a">$1,000</button>
+      <button class="sw-btn" data-amt="b">$5,000</button>
+      <button class="sw-btn" data-amt="c">$25,000<br>（上限）</button>
     </div>
 
     <div class="calc-card">
       <div class="calc-row">
-        <div class="calc-box dep"><div class="t">あなたの入金</div><div class="v" id="calcDep">1,000<small> USDT</small></div></div>
+        <div class="calc-box dep"><div class="t">あなたの入金</div><div class="v" id="calcDep">$1,000</div></div>
         <div class="calc-op">＋</div>
-        <div class="calc-box bonus"><div class="t">ボーナス20%</div><div class="v" id="calcBon">200<small> USDT</small></div></div>
+        <div class="calc-box bonus"><div class="t">ボーナス20%</div><div class="v" id="calcBon">$200</div></div>
       </div>
       <div class="calc-result">
         <div class="t">取引に使える資金</div>
-        <div class="v" id="calcSum">1,200<small> USDT</small></div>
+        <div class="v" id="calcSum">$1,200</div>
         <div class="jpy" id="calcJpy">（約19.2万円 相当）</div>
       </div>
-      <p class="calc-note">※ボーナスは入金額の20%。付与上限は 5,000 USDT のため、<b>25,000 USDT の入金で上限に到達</b>します。<br>※円換算は 1 USDT＝160円で計算した目安です。レートにより変動します。</p>
+      <p class="calc-note">※ボーナスは入金額の20%。受取上限は $5,000 のため、<b>$25,000 の入金で上限に到達</b>します。<br>※<b>1回目・2回目を含む期間中のすべての入金</b>が対象。入金方法の制限もありません。<br>※円換算は 1ドル＝160円で計算した目安です。レートにより変動します。</p>
     </div>
 
     <div class="points">
       <div class="point">
         <div class="ic">👥</div>
-        <div><h3><span class="accent">全ユーザーが対象</span></h3><p>新規の方も、すでにVantage口座をお持ちの方も参加できます。既存の方は追加口座を作るだけでOKです。</p></div>
+        <div><h3><span class="accent">すべての入金が対象</span></h3><p><b>1回目・2回目を含め、期間中の入金はすべて</b>ボーナスの対象。<b>入金方法の制限もありません</b>。分けて入金しても構いません。</p></div>
       </div>
       <div class="point">
         <div class="ic">⏱️</div>
-        <div><h3>条件達成後<span class="accent">5営業日以内</span>に付与</h3><p>ボーナスは条件を満たしたあと、5営業日以内に口座へ反映されます。反映がない場合はサポートへご確認ください。</p></div>
+        <div><h3><span class="accent">1日以内に自動付与</span></h3><p>申請や手続きは不要です。入金すればボーナスが<b>自動で</b>、<b>1日以内</b>に口座へ反映されます。待たされません。</p></div>
       </div>
       <div class="point">
         <div class="ic">🔗</div>
@@ -469,7 +499,7 @@ section{padding:46px 22px;}
       <ul class="route-steps">
         <li><span class="n">1</span><div>下のボタンから<b>専用リンク</b>で口座を開設（このリンク経由がコラボ口座の条件です）</div></li>
         <li><span class="n">2</span><div>本人確認を済ませて<b>入金</b>する</div></li>
-        <li><span class="n">3</span><div>条件達成後、<b>5営業日以内</b>に入金額の20%が付与される</div></li>
+        <li><span class="n">3</span><div><b>1日以内に自動で</b>入金額の20%が付与される</div></li>
       </ul>
       <a href="#" class="cta-btn js-vt-new" style="margin-top:16px;">コラボ口座をつくる<small>▶ 専用リンクで開設</small></a>
     </div>
@@ -479,9 +509,9 @@ section{padding:46px 22px;}
       <p>今の口座はそのままで大丈夫です。<b>追加口座</b>を1つ作り、下の番号を入力してください。</p>
       <ul class="route-steps">
         <li><span class="n">1</span><div>Vantageの<b>会員ページにログイン</b>して「追加口座の開設」へ進む</div></li>
-        <li><span class="n">2</span><div>口座タイプは<b>スタンダード／ECN／コピートレード</b>のいずれかを選ぶ</div></li>
+        <li><span class="n">2</span><div>口座タイプを選ぶ（<b>普段お使いのタイプでOK</b>）</div></li>
         <li><span class="n">3</span><div><b>「口座紐づけ依頼（任意）」の欄に下の番号を入力</b>する（ここが最重要）</div></li>
-        <li><span class="n">4</span><div>その追加口座へ<b>入金</b> → 5営業日以内に20%が付与される</div></li>
+        <li><span class="n">4</span><div><b>その追加口座へ入金</b> → 1日以内に自動で20%が付与される</div></li>
       </ul>
 
       <div id="codeBlock">
@@ -502,11 +532,11 @@ section{padding:46px 22px;}
     <h2 class="sec-title">⚠ 入金する前に<br>ここだけ確認してください</h2>
     <p class="sec-lead">条件は正直に書きます。読んでから判断してください。</p>
     <div class="warn-card">
-      <div class="warn-title">この4つを外すと<br>ボーナスがつきません</div>
+      <div class="warn-title">ここを外すと<br>ボーナスがつきません</div>
       <ul class="warn-list">
-        <li><b>コラボ口座であること。</b>新規は<b>専用リンク経由</b>、既存は追加口座の「口座紐づけ依頼（任意）」に<b class="js-code">------</b>の入力が必要です。</li>
-        <li><b>対象口座は3種類。</b>スタンダード／ECN／コピートレードが対象です。それ以外の口座タイプは対象外です。</li>
-        <li><b>ボーナスは即時ではありません。</b>条件達成後、<b>5営業日以内</b>に口座へ付与されます。</li>
+        <li><b>入金先は「<b class="js-code">------</b>に紐づく口座」だけ。</b>新規は<b>専用リンク経由</b>で開設した口座、既存は<b>紐づけ番号を入れて作った追加口座</b>が対象です。</li>
+        <li><b>もともとの口座に入れても対象外。</b>すでにお持ちの口座へ入金しても付与されません。<b>紐づけた口座へ入金</b>してください。</li>
+        <li><b>入金の回数・方法に制限はありません。</b>1回目・2回目を含む<b>期間中のすべての入金</b>が対象です。</li>
         <li><b>対象は期間中の入金のみ。</b><span class="js-period-long">9/1〜9/14</span>（日本時間）を過ぎた入金には付与されません。</li>
       </ul>
     </div>
@@ -564,11 +594,11 @@ section{padding:46px 22px;}
       </div>
       <div class="step">
         <div class="num">2</div>
-        <div><h4>期間中に入金する</h4><p><span class="js-period-long">9/1〜9/14</span>の間に入金。入金額の<b>20%</b>がボーナスとして加算されます（上限 5,000 USDT）。</p></div>
+        <div><h4>期間中に入金する</h4><p><span class="js-period-long">9/1〜9/14</span>の間に入金。入金額の<b>20%</b>が加算されます（上限 $5,000）。<b>回数・入金方法の制限なし</b>。</p></div>
       </div>
       <div class="step">
         <div class="num">3</div>
-        <div><h4>5営業日以内に付与 → 取引開始</h4><p>条件達成後、<b>5営業日以内</b>に口座へ反映されます。反映されない場合はVantageサポートか公式LINEへ。</p></div>
+        <div><h4>1日以内に自動付与 → 取引開始</h4><p>申請は不要です。<b>1日以内に自動で</b>口座へ反映されます。反映されない場合はVantageサポートか公式LINEへ。</p></div>
       </div>
       <div class="step">
         <div class="num">＋</div>
@@ -589,8 +619,8 @@ section{padding:46px 22px;}
       <span class="tk-badge">特典 1</span>
       <h3>コラボ限定<br><span class="gold">ボーナス20%追加</span></h3>
       <ul class="tk-list">
-        <li>入金額の<b>20%</b>がそのまま上乗せ（上限 5,000 USDT）</li>
-        <li>条件達成後、<b>5営業日以内</b>に口座へ付与</li>
+        <li>入金額の<b>20%</b>がそのまま上乗せ（受取上限 <b>$5,000</b>）</li>
+        <li><b>1日以内に自動付与</b>／1・2回目を含む全入金が対象・入金方法も自由</li>
         <li>9/2からの<b>「仮想通貨での初回入金特別ボーナス」「JCBカードでの入金ボーナス」と併用可能</b></li>
       </ul>
     </div>
@@ -658,19 +688,19 @@ section{padding:46px 22px;}
     </details>
     <details>
       <summary>すでにVantage口座を持っています。今の口座はどうなりますか？</summary>
-      <p class="a">今お使いの口座はそのままで問題ありません。<b>追加口座を1つ作る</b>だけで参加できます。追加口座は同一名義での正規の開設なので、複数アカウント扱いにはなりません。</p>
+      <p class="a">今お使いの口座はそのままで問題ありません。<b>追加口座を1つ作る</b>だけで参加できます。追加口座は同一名義での正規の開設なので、複数アカウント扱いにはなりません。ただし<b>入金先は新しく作った追加口座</b>です。今までの口座に入金してもボーナスは付きませんのでご注意ください。</p>
     </details>
     <details>
       <summary>ボーナスはいくらもらえますか？上限は？</summary>
-      <p class="a"><b>入金額の20%</b>です。付与上限は <b>5,000 USDT</b>（<span class="js-jpy-cap">約80万円</span>相当）で、<b>25,000 USDT の入金で上限に到達</b>します。※円換算は1 USDT＝160円で計算した目安です。</p>
+      <p class="a"><b>入金額の20%</b>です。受取上限は <b>$5,000</b>（<span class="js-jpy-cap">約80万円</span>相当）で、<b>$25,000 の入金で上限に到達</b>します。<b>1回目・2回目を含む期間中のすべての入金</b>が対象で、入金方法の制限もありません。※円換算は1ドル＝160円で計算した目安です。</p>
     </details>
     <details>
       <summary>ボーナスはいつ付与されますか？</summary>
-      <p class="a">条件達成後、<b>5営業日以内</b>に口座へ付与されます。即時反映ではないのでご注意ください。5営業日を過ぎても反映されない場合は、Vantageサポートまたは公式LINEへご連絡ください。</p>
+      <p class="a"><b>1日以内に自動で</b>口座へ付与されます。申請や手続きは必要ありません。1日を過ぎても反映されない場合は、Vantageサポートまたは公式LINEへご連絡ください。</p>
     </details>
     <details>
-      <summary>対象の口座タイプは？</summary>
-      <p class="a"><b>スタンダード口座／ECN口座／コピートレード口座</b>の3種類が対象です。それ以外の口座タイプは対象外となります。追加口座を作るときに、この3つのいずれかを選んでください。</p>
+      <summary>どの口座に入金すればいいですか？</summary>
+      <p class="a"><b><span class="js-code">------</span>に紐づいた口座</b>への入金が対象です。新規の方は専用リンクで開設した口座、既存の方は「口座紐づけ依頼（任意）」に番号を入力して作った追加口座になります。<b>もともとお持ちの口座に入金しても対象外</b>なのでご注意ください。</p>
     </details>
     <details>
       <summary>他のキャンペーンと併用できますか？</summary>
@@ -704,8 +734,8 @@ section{padding:46px 22px;}
       <li>外国為替証拠金取引（FX）・CFD取引・暗号資産（仮想通貨）関連商品の取引は、レバレッジの効果により、預託した証拠金を上回る損失が発生するおそれがある、リスクの高い金融商品です。暗号資産は価格変動が特に大きく、短時間で大きな損失が生じる可能性があります。</li>
       <li>取引は必ずご自身の判断と責任において、生活に影響のない余剰資金の範囲で行ってください。過去の実績や相場環境は、将来の成果を保証するものではありません。</li>
       <li>VantageTrading（Vantage Global Limited 等のグループ各社）は海外の金融ライセンスに基づき運営される業者であり、<b>日本の金融庁に登録された業者ではありません</b>。利用の判断はご自身の責任で行ってください。</li>
-      <li>本ページに記載のボーナス率・上限額・期間・対象口座タイプ・付与時期・併用可否などの条件は、予告なく変更・中止される場合があります。また記載の円換算額は 1 USDT＝160円で計算した目安であり、実際の付与額は為替・暗号資産レートにより変動します。最新かつ正確な条件は必ずVantageTrading公式サイトおよびサポートにてご確認ください。</li>
-      <li>スプレッドに関する記載は執筆時点の一般的な水準についての説明であり、市況・時間帯・銘柄により変動します。特定時点での優位性を保証するものではありません。</li>
+      <li>本ページに記載のボーナス率・上限額・期間・対象口座・付与時期・併用可否などの条件は、予告なく変更・中止される場合があります。また記載の円換算額は 1ドル＝160円で計算した目安であり、実際の付与額は為替レートにより変動します。最新かつ正確な条件は必ずVantageTrading公式サイトおよびサポートにてご確認ください。</li>
+      <li>スプレッドに関する記載はVantageTradingの提供情報および執筆時点の水準に基づくものです。スプレッドは市況・時間帯・銘柄により変動するため、常時同一の水準を保証するものではありません。</li>
       <li>特典（ボーナス20%追加・生配信トレードへの参加・Telegram AIトレード配信ほか各サービス）は投資助言を目的とするものではなく、利益を保証するものではありません。配信内容は情報提供であり、売買の最終判断はご自身で行ってください。</li>
     </ul>
     <p>© 2026 Narrow Focus. All Rights Reserved.</p>
@@ -755,7 +785,7 @@ document.querySelectorAll('.js-period').forEach(e=>{e.textContent=shortS+"("+wS+
 document.querySelectorAll('.js-period-long').forEach(e=>{e.textContent=longS+"("+wS+")〜"+longE+"("+wE+")";});
 
 /* ---- 円換算の目安 ---- */
-const RATE=CONFIG.JPY_PER_USDT||160;
+const RATE=CONFIG.JPY_PER_USD||160;
 function man(usdt){
   const m=usdt*RATE/10000;
   return (m>=100? Math.round(m) : Math.round(m*10)/10)+"万円";
@@ -778,9 +808,9 @@ function fmt(n){return n.toLocaleString('en-US');}
 function renderCalc(dep){
   const bonus=Math.min(dep*0.2, 5000);
   const sum=dep+bonus;
-  document.getElementById('calcDep').innerHTML=fmt(dep)+"<small> USDT</small>";
-  document.getElementById('calcBon').innerHTML=fmt(bonus)+"<small> USDT</small>";
-  document.getElementById('calcSum').innerHTML=fmt(sum)+"<small> USDT</small>";
+  document.getElementById('calcDep').innerHTML="$"+fmt(dep);
+  document.getElementById('calcBon').innerHTML="$"+fmt(bonus);
+  document.getElementById('calcSum').innerHTML="$"+fmt(sum);
   document.getElementById('calcJpy').textContent="（約"+man(sum)+" 相当）";
 }
 renderCalc(AMT.a);
