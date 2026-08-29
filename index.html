@@ -211,6 +211,47 @@ section{padding:46px 22px;}
 .point h3 .accent{color:#ff8442;}
 .point p{font-size:13px;color:var(--muted);}
 
+/* ---- 新規ユーザー特典スタック ---- */
+.newuser-sec{background:linear-gradient(180deg,#0e1620,#0c1119);}
+.nu-lead{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:16px 18px;margin-bottom:20px;font-size:13.5px;color:var(--muted);line-height:1.8;
+}
+.nu-lead b{color:var(--txt);}
+.nu-stack{display:flex;flex-direction:column;gap:10px;}
+.nu-item{
+  display:flex;gap:13px;align-items:flex-start;
+  background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 16px;
+}
+.nu-item .n{
+  flex:0 0 30px;height:30px;border-radius:9px;background:var(--card2);border:1px solid var(--line);
+  color:var(--muted);font-size:12.5px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:2px;
+}
+.nu-item h4{font-size:15px;font-weight:800;line-height:1.5;margin-bottom:3px;}
+.nu-item h4 .amt{color:var(--gold);font-size:18px;}
+.nu-item p{font-size:12.5px;color:var(--muted);line-height:1.7;}
+.nu-item p b{color:#ff8d99;}
+/* Narrow上乗せ分 */
+.nu-item.narrow{
+  border:1.5px solid var(--orange);background:linear-gradient(180deg,rgba(255,94,13,.16),rgba(255,94,13,.07));
+  box-shadow:0 6px 22px rgba(255,94,13,.22);
+}
+.nu-item.narrow .n{background:var(--orange);border-color:var(--orange);color:#fff;font-size:15px;}
+.nu-item.narrow h4{color:#fff;}
+.nu-item.narrow h4 .amt{color:var(--gold);}
+.nu-item.narrow p{color:#f4d9c9;}
+.nu-ex{
+  margin-top:18px;background:#0b1017;border:1.5px solid var(--gold-deep);border-radius:14px;padding:18px 16px;
+}
+.nu-ex .t{font-size:13px;font-weight:800;color:var(--gold);letter-spacing:.06em;margin-bottom:10px;text-align:center;}
+.nu-ex-row{display:flex;justify-content:space-between;gap:10px;font-size:13px;padding:7px 0;border-bottom:1px dashed var(--line);}
+.nu-ex-row:last-of-type{border-bottom:none;}
+.nu-ex-row span:first-child{color:var(--muted);}
+.nu-ex-row span:last-child{color:var(--txt);font-weight:800;white-space:nowrap;}
+.nu-ex-row.hl span:last-child{color:var(--gold);}
+.nu-note{margin-top:16px;font-size:11.5px;color:var(--muted);background:#0b1017;border:1px solid var(--line);border-radius:10px;padding:12px 14px;line-height:1.8;}
+.nu-note b{color:#ff8d99;}
+
 /* ---- 参加ルート（新規／既存） ---- */
 .join-sec{background:var(--bg2);}
 .route-tabs{display:flex;gap:8px;margin-bottom:18px;}
@@ -471,6 +512,65 @@ section{padding:46px 22px;}
     <a href="#join" class="cta-btn" style="margin-top:26px;">参加方法を見る<small>▶ 新規の方／口座をお持ちの方</small></a>
   </section>
 
+  <!-- ============ 新規ユーザー特典スタック ============ -->
+  <section class="newuser-sec" id="newuser">
+    <div class="sec-tag">FOR NEW USERS</div>
+    <h2 class="sec-title">はじめての方は、<br><span class="gold">もらえるものが違います</span></h2>
+    <p class="sec-lead">Vantageの新規特典に、今回のコラボ20%が<b>そのまま上乗せ</b>されます。</p>
+
+    <p class="nu-lead">Vantageには、もともと<b>新規口座開設者だけが受け取れるボーナス</b>があります。今回のコラボ20%はそれと<b>併用可能</b>。つまり、このタイミングで始める方が<b>いちばん有利</b>です。</p>
+
+    <div class="nu-stack">
+      <div class="nu-item">
+        <div class="n">1</div>
+        <div>
+          <h4>口座開設だけで <span class="amt">15,000円</span></h4>
+          <p>入金は不要。<b>登録から1週間以内</b>に本人確認（個人認証）を済ませるだけで受け取れます。※1週間を過ぎた場合は10,000円</p>
+        </div>
+      </div>
+      <div class="nu-item">
+        <div class="n">2</div>
+        <div>
+          <h4>初回入金 <span class="amt">120%</span> クレジットボーナス</h4>
+          <p>通常100%のところ、<b>登録から1週間以内の入金</b>なら120%にUP。クレジットボーナス上限 75,000円。</p>
+        </div>
+      </div>
+      <div class="nu-item">
+        <div class="n">3</div>
+        <div>
+          <h4>2回目の入金 <span class="amt">50%</span> クレジットボーナス</h4>
+          <p>クレジットボーナス上限 150,000円。</p>
+        </div>
+      </div>
+      <div class="nu-item">
+        <div class="n">4</div>
+        <div>
+          <h4>3回目以降 <span class="amt">20%</span> キャッシュバック</h4>
+          <p>回数の制限なく<b>常時20%</b>。上限 1,275,000円。</p>
+        </div>
+      </div>
+      <div class="nu-item narrow">
+        <div class="n">＋</div>
+        <div>
+          <h4>Narrowコラボ <span class="amt">20%</span> ボーナス</h4>
+          <p>今回のキャンペーン分。<b>上記に重ねて</b>受け取れます（受取上限 $5,000・1日以内に自動付与）。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="nu-ex">
+      <div class="t">例）登録して、初回に 62,500円 を入金した場合</div>
+      <div class="nu-ex-row"><span>① 口座開設ボーナス（入金不要）</span><span>15,000円</span></div>
+      <div class="nu-ex-row"><span>② 初回入金 120%（上限まで）</span><span>75,000円</span></div>
+      <div class="nu-ex-row hl"><span>③ Narrowコラボ 20%</span><span>12,500円</span></div>
+      <div class="nu-ex-row"><span style="color:var(--txt);font-weight:800;">受け取れるボーナス合計</span><span style="color:var(--gold);font-size:17px;">102,500円</span></div>
+    </div>
+
+    <p class="nu-note">※上記はVantageの新規向け特典を、いただいた最新の案内にもとづいて整理したものです。<b>金額・期限・適用条件は変更される場合があります</b>ので、お申し込み前にVantage公式サイトで最新の内容をご確認ください。<br>※クレジットボーナス自体は出金できません（証拠金として利用できるクッション機能付き）。取引で得た利益は出金できます。<br>※例の金額は上限まで受け取った場合の目安で、実際の付与額は入金額・レート・各キャンペーンの規定により変わります。</p>
+
+    <a href="#" class="cta-btn js-vt-new" style="margin-top:24px;">いま口座をつくる<small>▶ 新規特典＋コラボ20%を受け取る</small></a>
+  </section>
+
   <!-- ============ 参加方法（新規／既存） ============ -->
   <section class="join-sec" id="join">
     <div class="sec-tag">HOW TO JOIN</div>
@@ -490,7 +590,8 @@ section{padding:46px 22px;}
         <li><span class="n">2</span><div>本人確認を済ませて<b>入金</b>する</div></li>
         <li><span class="n">3</span><div><b>1日以内に自動で</b>入金額の20%が付与される</div></li>
       </ul>
-      <a href="#" class="cta-btn js-vt-new" style="margin-top:16px;">コラボ口座をつくる<small>▶ 専用リンクで開設</small></a>
+      <p class="micro" style="text-align:left;margin-top:12px;">💡 新規の方は、<a href="#newuser">Vantageの新規特典（最大15,000円＋初回120%）</a>も併用できます。</p>
+      <a href="#" class="cta-btn js-vt-new" style="margin-top:12px;">コラボ口座をつくる<small>▶ 専用リンクで開設</small></a>
     </div>
 
     <div class="route-panel hidden" id="routeExist">
@@ -675,6 +776,10 @@ section{padding:46px 22px;}
     <details>
       <summary>誰が対象ですか？</summary>
       <p class="a"><b>全ユーザーが対象</b>です。Vantageがはじめての方も、すでに口座をお持ちの方も参加できます。条件は「Narrowコラボ口座であること」だけ。新規は専用リンクから開設、既存の方は追加口座の「口座紐づけ依頼（任意）」に <b class="js-code">------</b> を入力してください。</p>
+    </details>
+    <details>
+      <summary>新規で口座を作る場合、Vantageの口座開設ボーナスと併用できますか？</summary>
+      <p class="a">はい、<b>併用できます</b>。Vantageの新規向け特典（口座開設ボーナス最大15,000円／初回入金120%・上限75,000円／2回目50%・上限150,000円／3回目以降20%キャッシュバック）に、今回のコラボ20%が<b>上乗せ</b>されます。新規の方がもっとも有利になるタイミングです。詳しくは<a href="#newuser" style="color:var(--teal);">こちら</a>をご覧ください。※口座開設ボーナスと初回120%は<b>登録から1週間以内</b>の本人確認・入金が条件です。最新の条件はVantage公式サイトでご確認ください。</p>
     </details>
     <details>
       <summary>すでにVantage口座を持っています。今の口座はどうなりますか？</summary>
