@@ -319,6 +319,25 @@ section{padding:46px 22px;}
 .warn-list li::before{content:"!";position:absolute;left:0;top:5px;color:#ff6b78;font-weight:900;background:rgba(226,51,74,.2);width:17px;height:17px;border-radius:50%;font-size:11px;display:flex;align-items:center;justify-content:center;}
 .warn-list li b{color:#ffd3d8;}
 
+/* ---- 参加登録わすれの救済ブロック ---- */
+.rescue{
+  margin-top:22px;background:linear-gradient(180deg,rgba(23,177,195,.14),rgba(23,177,195,.05));
+  border:1.5px solid var(--teal-deep);border-radius:15px;padding:20px 18px;
+}
+.rescue .rt{font-size:16.5px;font-weight:900;color:var(--teal);line-height:1.5;margin-bottom:4px;}
+.rescue .rs{font-size:13px;color:var(--muted);margin-bottom:14px;line-height:1.7;}
+.rescue ol{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.rescue li{
+  display:flex;gap:10px;align-items:flex-start;background:#0b1017;
+  border:1px solid var(--line);border-radius:10px;padding:11px 12px;font-size:13px;line-height:1.7;
+}
+.rescue li .rn{
+  flex:0 0 21px;height:21px;border-radius:50%;background:var(--teal-deep);color:#fff;
+  font-size:11.5px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:3px;
+}
+.rescue li b{color:var(--gold);}
+.rescue .rf{margin-top:12px;font-size:12.5px;color:var(--muted);line-height:1.7;}
+
 /* ---- BAN・利益没収の警告 ---- */
 .ban-sec{background:linear-gradient(180deg,#1d0b10,#120609);border-top:2px solid var(--red);border-bottom:2px solid var(--red);}
 .ban-head{
@@ -616,8 +635,10 @@ section{padding:46px 22px;}
       <p>下のボタンから開設すれば、そのままコラボ口座になります。コードの入力は不要です。</p>
       <ul class="route-steps">
         <li><span class="n">1</span><div>下のボタンから<b>専用リンク</b>で口座を開設（このリンク経由がコラボ口座の条件です）</div></li>
-        <li><span class="n">2</span><div>本人確認を済ませて<b>入金</b>する</div></li>
-        <li><span class="n">3</span><div><b>1日以内に自動で</b>入金額の20%が付与される</div></li>
+        <li><span class="n">2</span><div>本人確認を済ませる</div></li>
+        <li><span class="n">3</span><div><b>マイページ または Vantageアプリ</b>から<b>キャンペーンに参加登録</b>する<br><span style="color:#ff8d99;font-size:12px;">← ここを忘れる方が多いポイントです</span></div></li>
+        <li><span class="n">4</span><div>対象口座へ<b>入金</b>する</div></li>
+        <li><span class="n">5</span><div><b>1日以内に自動で</b>入金額の20%が付与される</div></li>
       </ul>
       <p class="micro" style="text-align:left;margin-top:12px;">💡 新規の方は、<a href="#newuser">Vantageの新規特典（最大15,000円＋初回120%）</a>も併用できます。</p>
       <a href="#" class="cta-btn js-vt-new" style="margin-top:12px;">コラボ口座をつくる<small>▶ 専用リンクで開設</small></a>
@@ -628,9 +649,10 @@ section{padding:46px 22px;}
       <p>今の口座はそのままで大丈夫です。<b>追加口座</b>を1つ作り、下の番号を入力してください。</p>
       <ul class="route-steps">
         <li><span class="n">1</span><div>Vantageの<b>会員ページにログイン</b>して「追加口座の開設」へ進む</div></li>
-        <li><span class="n">2</span><div>口座タイプは<b>スタンダード／ECN／コピートレード</b>のいずれかを選ぶ（この3つ以外は対象外）</div></li>
+        <li><span class="n">2</span><div>口座タイプは<b>スタンダード（JPY/USD）／ECN／コピートレード</b>のいずれかを選ぶ<br><span style="color:#ff8d99;font-size:12px;">※プレミアム口座と スタンダード（BTC/ETH）は対象外</span></div></li>
         <li><span class="n">3</span><div><b>「口座紐づけ依頼（任意）」の欄に下の番号を入力</b>する（ここが最重要）</div></li>
-        <li><span class="n">4</span><div><b>その追加口座へ入金</b> → 1日以内に自動で20%が付与される</div></li>
+        <li><span class="n">4</span><div><b>マイページ または Vantageアプリ</b>から<b>キャンペーンに参加登録</b>する<br><span style="color:#ff8d99;font-size:12px;">← ここを忘れる方が多いポイントです</span></div></li>
+        <li><span class="n">5</span><div><b>その追加口座へ入金</b> → 1日以内に自動で20%が付与される</div></li>
       </ul>
 
       <div id="codeBlock">
@@ -654,8 +676,9 @@ section{padding:46px 22px;}
       <div class="warn-title">ここを外すと<br>ボーナスがつきません</div>
       <ul class="warn-list">
         <li><b>入金先は「<b class="js-code">------</b>に紐づく口座」だけ。</b>新規は<b>専用リンク経由</b>で開設した口座、既存は<b>紐づけ番号を入れて作った追加口座</b>が対象です。</li>
+        <li><b>入金の前に「参加登録」が必要です。</b>マイページまたはVantageアプリから、本キャンペーンへの<b>参加登録</b>を行ってください。<b>登録せずに入金しても、後から登録して「引換え」を押せば受け取れます</b>（下の救済手順を参照）。</li>
         <li><b>もともとの口座に入れても対象外。</b>すでにお持ちの口座へ入金しても付与されません。<b>紐づけた口座へ入金</b>してください。</li>
-        <li><b>口座タイプは3種類のみ。</b><b>スタンダード／ECN／コピートレード</b>が対象です。それ以外のタイプで作ると対象外になります。</li>
+        <li><b>対象は3種類の口座のみ。</b><b>スタンダード（JPY/USD）／ECN／コピートレード</b>が対象です。<b>プレミアム口座</b>と<b>スタンダード口座（BTC/ETH）</b>は対象外です。</li>
         <li><b>入金の回数・方法に制限はありません。</b>1回目・2回目を含む<b>期間中のすべての入金</b>が対象です。</li>
         <li><b>対象は期間中の入金のみ。</b><span class="js-period-long">9/1〜9/14</span>（日本時間）を過ぎた入金には付与されません。</li>
       </ul>
@@ -704,8 +727,8 @@ section{padding:46px 22px;}
   <!-- ============ 受け取りステップ ============ -->
   <section>
     <div class="sec-tag">STEP</div>
-    <h2 class="sec-title">全体の流れは<br><span class="or">3ステップ</span></h2>
-    <p class="sec-lead">最短3分で参加できます。</p>
+    <h2 class="sec-title">全体の流れは<br><span class="or">4ステップ</span></h2>
+    <p class="sec-lead">最短5分で参加できます。</p>
 
     <div class="steps">
       <div class="step">
@@ -714,11 +737,15 @@ section{padding:46px 22px;}
       </div>
       <div class="step">
         <div class="num">2</div>
-        <div><h4>期間中に入金する</h4><p><span class="js-period-long">9/1〜9/14</span>の間に入金。入金額の<b>20%</b>が加算されます（上限 $5,000）。<b>回数・入金方法の制限なし</b>。</p></div>
+        <div><h4>キャンペーンに参加登録する</h4><p><b>マイページ または Vantageアプリ</b>から、本キャンペーンへの<b>参加登録</b>を行います。<b style="color:#ff8d99;">入金より前に済ませるのが確実です。</b></p></div>
       </div>
       <div class="step">
         <div class="num">3</div>
-        <div><h4>1日以内に自動付与 → 取引開始</h4><p>申請は不要です。<b>1日以内に自動で</b>口座へ反映されます。反映されない場合はVantageサポートか公式LINEへ。</p></div>
+        <div><h4>期間中に入金する</h4><p><span class="js-period-long">9/1〜9/14</span>の間に入金。入金額の<b>20%</b>が加算されます（上限 $5,000）。<b>回数・入金方法の制限なし</b>。</p></div>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <div><h4>1日以内に自動付与 → 取引開始</h4><p>参加登録が済んでいれば、<b>1日以内に自動で</b>口座へ反映されます。反映されない場合はVantageサポートか公式LINEへ。</p></div>
       </div>
       <div class="step">
         <div class="num">＋</div>
@@ -726,7 +753,19 @@ section{padding:46px 22px;}
       </div>
     </div>
 
-    <a href="#join" class="cta-btn" style="margin-top:26px;">いま参加する<small>▶ 期間：<span class="js-period">9/1〜9/14</span> まで</small></a>
+    <div class="rescue">
+      <div class="rt">✅ 参加登録を忘れて入金してしまった方へ</div>
+      <div class="rs">大丈夫です。<b style="color:var(--txt);">あとからでも受け取れます。</b>次の順番で操作してください。</div>
+      <ol>
+        <li><span class="rn">1</span><div>マイページ または Vantageアプリから、<b>本キャンペーンに参加登録</b>する</div></li>
+        <li><span class="rn">2</span><div><b>「ボーナス履歴」</b>を開く</div></li>
+        <li><span class="rn">3</span><div><b>「実行」の欄にある「引換え」ボタン</b>をクリックする</div></li>
+      </ol>
+      <p class="rf">これでボーナスが受け取れます。うまくいかない場合は、そのまま公式LINEにご連絡ください。画面を見ながらご案内します。</p>
+      <a href="#" class="cta-btn line js-line" style="margin-top:14px;">公式LINEで相談する<small>▶ 登録無料・30秒</small></a>
+    </div>
+
+    <a href="#join" class="cta-btn" style="margin-top:22px;">いま参加する<small>▶ 期間：<span class="js-period">9/1〜9/14</span> まで</small></a>
   </section>
 
   <!-- ============ 3大特典 ============ -->
@@ -823,12 +862,20 @@ section{padding:46px 22px;}
       <p class="a"><b>1日以内に自動で</b>口座へ付与されます。申請や手続きは必要ありません。1日を過ぎても反映されない場合は、Vantageサポートまたは公式LINEへご連絡ください。</p>
     </details>
     <details>
+      <summary>入金する前に、何か登録が必要ですか？</summary>
+      <p class="a">はい。口座を用意したあと、<b>マイページ または Vantageアプリから本キャンペーンへの「参加登録」</b>が必要です。入金より前に済ませておくのが確実です。※Narrowのコラボ口座であればキャンペーンページが表示されます。見当たらない場合は公式LINEへご相談ください。</p>
+    </details>
+    <details>
+      <summary>参加登録をせずに入金してしまいました。もらえませんか？</summary>
+      <p class="a"><b>受け取れます。</b>あとから ①マイページまたはVantageアプリで<b>参加登録</b>する → ②<b>「ボーナス履歴」</b>を開く → ③<b>「実行」欄の「引換え」ボタン</b>をクリック、の順で操作してください。これでボーナスが反映されます。うまくいかない場合は公式LINEにご連絡ください。</p>
+    </details>
+    <details>
       <summary>どの口座に入金すればいいですか？</summary>
       <p class="a"><b><span class="js-code">------</span>に紐づいた口座</b>への入金が対象です。新規の方は専用リンクで開設した口座、既存の方は「口座紐づけ依頼（任意）」に番号を入力して作った追加口座になります。<b>もともとお持ちの口座に入金しても対象外</b>なのでご注意ください。</p>
     </details>
     <details>
       <summary>対象の口座タイプは？</summary>
-      <p class="a"><b>スタンダード口座／ECN口座／コピートレード口座</b>の3種類が対象です。それ以外の口座タイプは対象外となります。口座を作るときに、この3つのいずれかを選んでください。</p>
+      <p class="a"><b>スタンダード口座（JPY/USD）／ECN口座／コピートレード口座</b>の3種類が対象です。<b>プレミアム口座</b>と<b>スタンダード口座（BTC/ETH建て）</b>は対象外なのでご注意ください。口座を作るときに、対象の3つのいずれかを選んでください。</p>
     </details>
     <details>
       <summary>他のキャンペーンと併用できますか？</summary>
