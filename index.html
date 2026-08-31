@@ -115,6 +115,27 @@ img{max-width:100%;display:block;}
   background:linear-gradient(180deg,#1fd96a 0%,var(--green) 55%,#04a344 100%);
   box-shadow:0 8px 20px rgba(6,199,85,.35), inset 0 1px 0 rgba(255,255,255,.3);
 }
+/* ---- ヒーロー直下：受け取り条件（2ステップ） ---- */
+.cond{
+  margin-top:18px;background:#0b1017;border:1px solid var(--line);border-radius:13px;
+  padding:13px 12px 11px;
+}
+.cond-t{font-size:12.5px;font-weight:800;color:var(--muted);letter-spacing:.02em;}
+.cond-t b{color:#ff8442;}
+.cond-row{display:flex;align-items:stretch;justify-content:center;gap:7px;margin-top:9px;}
+.cond-c{
+  flex:1;display:flex;align-items:center;justify-content:center;gap:6px;
+  background:var(--card);border:1px solid var(--line);border-radius:9px;
+  padding:9px 6px;font-size:11.5px;font-weight:800;color:var(--txt);line-height:1.35;text-align:left;
+}
+.cond-c i{
+  flex:0 0 17px;height:17px;border-radius:50%;background:var(--orange-deep);color:#fff;
+  font-size:10.5px;font-weight:900;font-style:normal;display:flex;align-items:center;justify-content:center;
+}
+.cond-ar{display:flex;align-items:center;color:#ff8442;font-size:13px;font-weight:900;}
+.cond-n{font-size:11.5px;color:var(--muted);margin-top:9px;line-height:1.6;}
+.cond-n a{color:var(--teal);font-weight:700;}
+
 .micro{font-size:11.5px;color:var(--muted);text-align:center;margin-top:10px;}
 .micro a{color:var(--teal);}
 
@@ -457,7 +478,15 @@ section{padding:46px 22px;}
       <a href="#" class="cta-btn js-vt-new">コラボ口座をつくる<small>▶ 新規の方はこちら（最短3分）</small></a>
       <a href="#join" class="cta-btn sub">すでにVantage口座をお持ちの方はこちら</a>
       <p class="lead">Bitcoinが8万ドルを回復し、<b>ボラティリティが戻ってきました</b>。VantageTrading × Narrow Focus の<b>コラボ口座限定</b>で、入金額の<b>20%をボーナスとして追加</b>（上限 $5,000）。<b>1・2回目を含むすべての入金</b>が対象で、<b>1日以内に自動付与</b>。新規も既存も全ユーザーが対象です。</p>
-      <p class="micro">※ボーナスは<a href="#join">コラボ口座</a>での参加が条件です</p>
+      <div class="cond">
+        <div class="cond-t">ボーナスの受け取り条件は <b>2つだけ</b></div>
+        <div class="cond-row">
+          <span class="cond-c"><i>1</i>コラボ口座を<br>つくる</span>
+          <span class="cond-ar">▶</span>
+          <span class="cond-c"><i>2</i>キャンペーンに<br>参加登録</span>
+        </div>
+        <p class="cond-n">※先に入金してしまった方も、<a href="#rescue">あとから受け取れます</a></p>
+      </div>
     </div>
   </header>
 
@@ -753,7 +782,7 @@ section{padding:46px 22px;}
       </div>
     </div>
 
-    <div class="rescue">
+    <div class="rescue" id="rescue">
       <div class="rt">✅ 参加登録を忘れて入金してしまった方へ</div>
       <div class="rs">大丈夫です。<b style="color:var(--txt);">あとからでも受け取れます。</b>次の順番で操作してください。</div>
       <ol>
